@@ -1,0 +1,124 @@
+{
+  "schema": "dhk-icon-manifest/v1",
+  "library": {
+    "name": "Phosphor Icons",
+    "package": "@phosphor-icons/core",
+    "version": "2.1.1",
+    "weight": "bold",
+    "license": "MIT",
+    "license_file": "phosphor/LICENSE.phosphor.txt",
+    "source": "https://registry.npmjs.org/@phosphor-icons/core/-/core-2.1.1.tgz"
+  },
+  "icons": {
+    "team": {
+      "label": "Team",
+      "phosphor": ["UsersThree"],
+      "file": "phosphor/2.1.1/bold/users-three-bold.svg"
+    },
+    "data": {
+      "label": "Daten",
+      "phosphor": ["Database"],
+      "file": "phosphor/2.1.1/bold/database-bold.svg"
+    },
+    "operations": {
+      "label": "Betrieb",
+      "phosphor": ["GearSix"],
+      "file": "phosphor/2.1.1/bold/gear-six-bold.svg"
+    },
+    "methods": {
+      "label": "Methode",
+      "phosphor": ["ListChecks"],
+      "file": "phosphor/2.1.1/bold/list-checks-bold.svg"
+    },
+    "joker": {
+      "label": "Joker",
+      "phosphor": ["Asterisk"],
+      "file": "phosphor/2.1.1/bold/asterisk-bold.svg"
+    },
+    "project": {
+      "label": "Projekt",
+      "phosphor": ["FolderOpen"],
+      "file": "phosphor/2.1.1/bold/folder-open-bold.svg"
+    },
+    "project_factor": {
+      "label": "Projektfaktor",
+      "phosphor": ["FolderOpen", "SlidersHorizontal"],
+      "file": "composites/projektfaktor.svg"
+    },
+    "event": {
+      "label": "Ereignis",
+      "phosphor": ["Lightning"],
+      "file": "phosphor/2.1.1/bold/lightning-bold.svg"
+    },
+    "inspect": {
+      "label": "Sichten",
+      "phosphor": ["Eye"],
+      "file": "phosphor/2.1.1/bold/eye-bold.svg"
+    },
+    "draw": {
+      "label": "Nachziehen",
+      "phosphor": ["CardsThree"],
+      "file": "phosphor/2.1.1/bold/cards-three-bold.svg"
+    },
+    "retrieve": {
+      "label": "Rückholen",
+      "phosphor": ["ArrowCounterClockwise"],
+      "file": "phosphor/2.1.1/bold/arrow-counter-clockwise-bold.svg"
+    },
+    "redistribute": {
+      "label": "Umverteilen",
+      "phosphor": ["ArrowsLeftRight"],
+      "file": "phosphor/2.1.1/bold/arrows-left-right-bold.svg"
+    },
+    "positive": {
+      "label": "positiv",
+      "phosphor": ["TrendUp"],
+      "file": "phosphor/2.1.1/bold/trend-up-bold.svg"
+    },
+    "negative": {
+      "label": "negativ",
+      "phosphor": ["TrendDown"],
+      "file": "phosphor/2.1.1/bold/trend-down-bold.svg"
+    },
+    "ambivalent": {
+      "label": "ambivalent",
+      "phosphor": ["Scales"],
+      "file": "phosphor/2.1.1/bold/scales-bold.svg"
+    },
+    "rarity": {
+      "label": "Seltenheitsmarke",
+      "phosphor": ["Seal"],
+      "file": "phosphor/2.1.1/bold/seal-bold.svg"
+    },
+    "project_seal": {
+      "label": "Projektsiegel",
+      "phosphor": ["Stamp"],
+      "file": "phosphor/2.1.1/bold/stamp-bold.svg"
+    },
+    "booster_band": {
+      "label": "Boosterbanderole",
+      "phosphor": ["CardsThree", "TagSimple"],
+      "file": "composites/boosterbanderole.svg"
+    },
+    "cooperation": {
+      "label": "Kooperation",
+      "phosphor": ["Handshake"],
+      "file": "phosphor/2.1.1/bold/handshake-bold.svg"
+    },
+    "extra_effort": {
+      "label": "Mehraufwand",
+      "phosphor": ["HourglassMedium"],
+      "file": "phosphor/2.1.1/bold/hourglass-medium-bold.svg"
+    },
+    "safeguard": {
+      "label": "Absicherung",
+      "phosphor": ["ShieldCheck"],
+      "file": "phosphor/2.1.1/bold/shield-check-bold.svg"
+    },
+    "wildcard_choice": {
+      "label": "Wildcard-Wahl",
+      "phosphor": ["Asterisk", "CheckCircle"],
+      "file": "composites/wildcard-wahl.svg"
+    }
+  }
+}

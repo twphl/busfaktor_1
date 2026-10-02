@@ -1,0 +1,20 @@
+domains:
+  team:
+    label: "Team"
+    capacity: "Personalzeit"
+    themes: ["Kooperation", "Wissenstransfer", "Schutz", "Personal"]
+  data:
+    label: "Daten & Standards"
+    capacity: "Datenzugang"
+    themes: ["Validierung", "Suche", "Sortierung", "Umwandlung"]
+  operations:
+    label: "Betrieb"
+    capacity: "Rechenkapazität"
+    themes: ["Reparatur", "Wiederherstellung", "Robustheit", "Ablage"]
+  methods:
+    label: "Methoden, KI & Automatisierung"
+    capacity: "Methodische Expertise"
+    themes: ["Tempo", "Kopieren", "Evaluation", "Risiko"]
+  neutral:
+    label: "Neutral"
+    themes: ["globale Ereignisse", "interdisziplinäre Effekte"]

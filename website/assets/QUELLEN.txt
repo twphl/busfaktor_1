@@ -1,0 +1,49 @@
+BUSFAKTOR: 1 — Website-Assets
+
+Kanonische Texte: data/cards.csv
+Bildschirmassets (Karten, Illustrationen, Rückseite, Siegel,
+Ottermarke, Icons, Fonts, Repository-QR-Code) sind unverändert aus keynote-neustart/assets/
+übernommen. Deren Herkunft und Prüfung stehen in
+keynote-neustart/assets/QUELLEN.txt.
+
+Reinweißes Siegel für Favicon und Footer: build/seal/siegel-reinweiss.svg,
+unverändert als seal-white.svg übernommen. Dies ist die Siegelfassung der
+Stickervorlage, ohne Beschnitt und Produktionsmarkierungen.
+
+Linkvorschau: social-preview.png wird mit website/social_preview.py aus den
+vorhandenen Karten KAT-C03, KAT-M03 und KAT-U21, dem reinweißen Siegel sowie
+Noto Sans und Bitter gesetzt. Format: 1200 × 630 Pixel; keine neue Illustration.
+Open-Graph- und Twitter-Metadaten kommen aus website/social_meta.py;
+öffentliche Basisadresse und Seitennamen stehen in website/site-config.json.
+
+Kartendesigner: renderer.js ist eine JavaScript-Portierung von
+scripts/render_cards.py. Layout, Profil, Konstanten, Icongeometrie und
+Schriftmetriken in renderer-data.js stammen unverändert aus dem Python-Renderer.
+Die fünf Noto-Schnitte des Renderers liegen unter fonts/.
+
+A4-Kartendruckvorlage: scripts/render_print_and_play.py setzt die 82 geprüften
+Kartenmotive auf A4-Bögen mit Schnittmarken. Das Prüfmanifest unter
+output/pdf/busfaktor-1-karten-a4.json dokumentiert die verwendeten Quellen.
+
+blank/: die sechs Blanko-Motive, wie in der Keynote.
+inspiration/: drei unveränderte PHYLO-Beispielkarten und der QR-Code zu
+phylogame.org/decks. Sie sind nicht Teil dieses Projekts und stehen nicht
+unter CC BY-SA, sondern unter CC BY-NC-ND 4.0 (phylogame.org/licenses):
+GSA/PHYLO „Lose Funding!“ (Art: Maki Naro), WWEST/WISE „Rosalind Franklin“
+(Art: Ping Zhu), Ingenium „Jocelyn Bell Burnell“ (Grafik: nineSixteen
+Creative Inc.).
+
+Eigene Regeln, Kartendaten, Illustrationen, Gestaltung, Dokumentation und
+Code: CC BY-SA 4.0.
+Siehe LICENSE.txt und docs/09-licensing-and-attribution.md im Repository.
+Mechanik nach PHYLO Process of Science, CC BY-SA 4.0.
+Pflicht-Credit: Sydney Ang, Genevieve Leduc-Robert, Lu Li, and Sam MacKinnon.
+https://phylogame.org/licenses/
+
+Phosphor Icons 2.1.1 Bold, unveränderte semantische Zuordnung des Repositorys.
+MIT-Lizenz: icons/LICENSE.txt.
+Noto Sans und Noto Serif, unverändert aus data/assets/fonts/; SIL OFL 1.1: fonts/OFL.txt.
+Bitter von Sol Matas: unveränderte variable Schrift aus dem Google-Fonts-Repository.
+Quelle, Prüfsumme und Lizenz: fonts/Bitter-SOURCE.txt und fonts/Bitter-OFL.txt.
+
+Produktion: geplante Auflage 234-plus-18, ADR 0019.

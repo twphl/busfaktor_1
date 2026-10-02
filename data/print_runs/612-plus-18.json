@@ -1,0 +1,16 @@
+{
+  "name": "612-plus-18",
+  "adr": "0002",
+  "description": "Ursprüngliche Kleinstauflage. Überholt durch ADR 0019, hier gehalten damit der Plan ausführbar bleibt.",
+  "standard_total": 612,
+  "foil_total": 18,
+  "foil_in_circulation": 18,
+  "stage_sets": 2,
+  "blank_cards": 0,
+  "reserve": 50,
+  "packs": {
+    "normal": 18,
+    "special": 18
+  },
+  "omit_from_boosters": []
+}

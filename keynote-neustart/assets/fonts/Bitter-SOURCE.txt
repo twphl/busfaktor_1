@@ -1,0 +1,6 @@
+Bitter — Sol Matas
+Unveränderte variable Originalschrift, 11.09.2026 lokal eingebunden.
+https://raw.githubusercontent.com/google/fonts/main/ofl/bitter/Bitter%5Bwght%5D.ttf
+https://github.com/solmatas/BitterPro
+SHA-256: ef2b9a711fb02f1e5823b34da1b7450e0fc76793b7d733a8b41006e24916d4a7
+Lizenz: SIL OFL 1.1, siehe Bitter-OFL.txt.

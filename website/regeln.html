@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111513">
+  <meta name="description" content="Die vollständigen Spielregeln von Busfaktor: 1 — Aufbau, Spielzug, Kooperation, Ereignisse, Wertung und alle Sonderfälle.">
+  <title>Spielregeln · Busfaktor: 1</title>
+  <!-- social:meta -->
+  <link rel="canonical" href="https://busfaktor-eins.de/regeln.html">
+  <meta property="og:title" content="Spielregeln · Busfaktor: 1">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://busfaktor-eins.de/regeln.html">
+  <meta property="og:site_name" content="Busfaktor: 1">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:description" content="Die vollständigen Spielregeln von Busfaktor: 1 — Aufbau, Spielzug, Kooperation, Ereignisse, Wertung und alle Sonderfälle.">
+  <meta property="og:image" content="https://busfaktor-eins.de/assets/social-preview.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Wortmarke Busfaktor: 1, der Satz Endlich spielend scheitern, Ottersiegel und drei Karten aus dem Set.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Spielregeln · Busfaktor: 1">
+  <meta name="twitter:description" content="Die vollständigen Spielregeln von Busfaktor: 1 — Aufbau, Spielzug, Kooperation, Ereignisse, Wertung und alle Sonderfälle.">
+  <meta name="twitter:image" content="https://busfaktor-eins.de/assets/social-preview.png">
+  <meta name="twitter:image:alt" content="Wortmarke Busfaktor: 1, der Satz Endlich spielend scheitern, Ottersiegel und drei Karten aus dem Set.">
+  <!-- /social:meta -->
+  <link rel="icon" href="assets/seal-white.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/NotoSans-Bold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/Bitter-variable.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/NotoSans-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="site.js" defer></script>
+  <script src="regeln.js" defer></script>
+</head>
+<body class="rules-page">
+
+  <!-- site:nav -->
+  <header class="site-header">
+    <a href="index.html#top" class="wordmark" aria-label="Busfaktor: 1, zur Startseite">Busfaktor:<em>1</em></a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+      <div class="nav-group">
+        <button type="button" class="nav-top active" id="das-spiel-button" aria-expanded="false" aria-controls="das-spiel">Das Spiel</button>
+        <div class="nav-menu" id="das-spiel" aria-labelledby="das-spiel-button">
+          <a href="spielprinzip.html">Spielprinzip</a>
+          <a href="regeln.html" class="active" aria-current="page">Regeln</a>
+          <a href="spielen.html">Im Browser spielen</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <button type="button" class="nav-top" id="die-karten-button" aria-expanded="false" aria-controls="die-karten">Die Karten</button>
+        <div class="nav-menu" id="die-karten" aria-labelledby="die-karten-button">
+          <a href="karten.html">Alle 82 Motive</a>
+          <a href="generator.html">Kartendesigner</a>
+          <a href="index.html#auflage">Anti-Konferenz-Edition</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <button type="button" class="nav-top" id="das-projekt-button" aria-expanded="false" aria-controls="das-projekt">Das Projekt</button>
+        <div class="nav-menu" id="das-projekt" aria-labelledby="das-projekt-button">
+          <a href="index.html#entstehung">Entstehung</a>
+          <a href="index.html#herkunft">Herkunft: PHYLO</a>
+          <a href="index.html#mitmachen">Mitmachen</a>
+          <a href="lizenzen.html">Lizenzen</a>
+          <a href="../keynote-neustart/index.html">Präsentation ↗</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- /site:nav -->
+
+  <main id="top">
+    <section class="page-intro rules-intro mist">
+      <div class="container">
+        <div class="mast"><span>Vollständige Spielregeln</span><span><!-- regeln:stand -->Version 1.0 · Stand 29.08.2026<!-- /regeln:stand --></span></div>
+        <h1 class="page-title">Vollständig dokumentiert.<br><em>Ausnahmsweise.</em></h1>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#kurzreferenz">Zur Kurzreferenz ↓</a>
+          <a class="btn btn-ghost" href="SPIELREGELN.md" target="_blank" rel="noopener">Als Markdown ↗</a>
+          <details class="menu-button" id="pdf-menu">
+            <summary class="btn btn-ghost">Als PDF</summary>
+            <div class="menu-panel">
+              <p class="menu-label">Zum Lesen</p>
+              <a href="assets/druck/regelheft-lesefolge.pdf" target="_blank" rel="noopener">Regelheft im Kartenformat</a>
+              <p class="menu-label">Zum Drucken</p>
+              <a href="assets/druck/regelheft-druckbogen.pdf" target="_blank" rel="noopener">Druckbögen A4 quer, beidseitig</a>
+              <p class="menu-label">Ohne Duplexdruck</p>
+              <a href="assets/druck/regelheft-vorderseiten.pdf" target="_blank" rel="noopener">Vorderseiten</a>
+              <a href="assets/druck/regelheft-rueckseiten.pdf" target="_blank" rel="noopener">Rückseiten</a>
+              <a href="assets/druck/regelheft-rueckseiten-umgekehrt.pdf" target="_blank" rel="noopener">Rückseiten, umgekehrte Reihenfolge</a>
+              <a href="assets/druck/kalibrierung-vorderseiten.pdf" target="_blank" rel="noopener">Probebogen vorn</a>
+              <a href="assets/druck/kalibrierung-rueckseiten.pdf" target="_blank" rel="noopener">Probebogen hinten</a>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="rules">
+      <div class="container rules-layout">
+        <!-- regeln:inhalt -->
+        <nav class="rules-toc" aria-label="Inhalt der Regeln">
+          <details open>
+            <summary>Inhalt</summary>
+            <ol>
+              <li><a href="#spielidee-und-ziel"><span>1</span>Spielidee und Ziel</a></li>
+              <li><a href="#spielmaterial"><span>2</span>Spielmaterial</a></li>
+              <li><a href="#begriffe-und-kartenbereiche"><span>3</span>Begriffe und Kartenbereiche</a></li>
+              <li><a href="#kartenarten"><span>4</span>Kartenarten</a></li>
+              <li><a href="#spielaufbau"><span>5</span>Spielaufbau</a></li>
+              <li><a href="#runden-und-zuege"><span>6</span>Runden und Züge</a></li>
+              <li><a href="#phase-1-zwei-karten-ziehen"><span>7</span>Phase 1: Zwei Karten ziehen</a></li>
+              <li><a href="#phase-2-aktionen-ausfuehren"><span>8</span>Phase 2: Aktionen ausführen</a></li>
+              <li><a href="#phase-3-hand-aufraeumen"><span>9</span>Phase 3: Hand aufräumen</a></li>
+              <li><a href="#projekte-abschliessen"><span>10</span>Projekte abschließen</a></li>
+              <li><a href="#kooperation"><span>11</span>Kooperation</a></li>
+              <li><a href="#ereignisse-und-timing"><span>12</span>Ereignisse und Timing</a></li>
+              <li><a href="#die-acht-ereignis-templates"><span>13</span>Die acht Ereignis-Templates</a></li>
+              <li><a href="#offene-ablage-und-verbrauchsstapel"><span>14</span>Offene Ablage und Verbrauchsstapel</a></li>
+              <li><a href="#spielende"><span>15</span>Spielende</a></li>
+              <li><a href="#wertung"><span>16</span>Wertung</a></li>
+              <li><a href="#kartentext-und-sonderfaelle"><span>17</span>Kartentext und Sonderfälle</a></li>
+              <li><a href="#kurzreferenz"><span>18</span>Kurzreferenz</a></li>
+              <li><a href="#herkunft-und-lizenz"><span>19</span>Herkunft und Lizenz</a></li>
+            </ol>
+          </details>
+        </nav>
+        <article class="rules-body">
+          <section class="rule" id="spielidee-und-ziel">
+            <h2><a class="rule-no" href="#spielidee-und-ziel">§ 1</a> <span>Spielidee und Ziel</span></h2>
+            <p>Zwei bis vier Personen bearbeiten Forschungs- und Infrastrukturprojekte. Es geht um die Arbeit, die Forschung möglich macht: Daten, Editionen, Dienste, Software und Betrieb. Projekte verlangen Kombinationen aus Team, Daten, Betrieb und Methode. Projektfaktoren erfüllen diese Anforderungen; Ereignisse helfen, stören oder verändern laufende Projekte. Eine erfüllte Anforderung heißt nur, dass der Bedarf im Projekt gedeckt ist – nicht, dass er gut gelöst wurde (<a class="rule-ref" href="#kartenarten">§ 4</a>).</p>
+            <p>Abgeschlossene Projekte bringen Punkte. Begonnene, aber nicht abgeschlossene Projekte geben am Spielende Minuspunkte. Wer nach sechs Runden die meisten Punkte besitzt, gewinnt.</p>
+            <p>Es gibt keinen Kampf, keine Lebenspunkte und keine Eliminierung.</p>
+          </section>
+          <section class="rule" id="spielmaterial">
+            <h2><a class="rule-no" href="#spielmaterial">§ 2</a> <span>Spielmaterial</span></h2>
+            <p>Für eine Partie wird ein gemeinsamer Satz aus 74 Karten verwendet:</p>
+            <ul>
+              <li>16 Projekte</li>
+              <li>46 Projektfaktoren</li>
+              <li>12 Ereignisse</li>
+            </ul>
+            <p>Zusätzlich werden benötigt:</p>
+            <ul>
+              <li>eine Rundenanzeige von 1 bis 6</li>
+              <li>optional je ein Marker für Kooperation und gewählte Faktortypen von Wildcards</li>
+              <li>ausreichend Platz für vier Kartenbereiche in der Tischmitte</li>
+            </ul>
+          </section>
+          <section class="rule" id="begriffe-und-kartenbereiche">
+            <h2><a class="rule-no" href="#begriffe-und-kartenbereiche">§ 3</a> <span>Begriffe und Kartenbereiche</span></h2>
+            <div class="rule-sub">
+              <h3 id="begriffe-und-kartenbereiche-hand">Hand</h3>
+              <p>Karten auf der Hand sind geheim. Projekte, Projektfaktoren und Ereignisse zählen alle zum Handlimit.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="begriffe-und-kartenbereiche-aktives-projekt">Aktives Projekt</h3>
+              <p>Ein offen vor einer Person ausliegendes, noch nicht abgeschlossenes Projekt. Ein aktives Projekt kann nicht freiwillig zurückgenommen oder abgeworfen werden.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="begriffe-und-kartenbereiche-anforderungen">Anforderungen</h3>
+              <p>Die Symbole eines Projekts zeigen die benötigten Faktortypen. Jedes Symbol ist eine eigene Anforderung. Zwei gleiche Symbole benötigen zwei unterschiedliche physische Faktoren.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="begriffe-und-kartenbereiche-anlegen">Anlegen</h3>
+              <p>Eine Karte offen an ein Projekt legen. Angelegte Karten sind nicht mehr auf der Hand. Ein Faktor erfüllt höchstens eine Anforderung desselben Projekts.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="begriffe-und-kartenbereiche-kontrollierende-person">Kontrollierende Person</h3>
+              <p>Die Person, die einen Faktor ausgespielt hat, kontrolliert ihn. Wird der Faktor auf die Hand zurückgegeben, geht er an diese Person – auch wenn er durch einen Karteneffekt an ein anderes Projekt verschoben wurde.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="begriffe-und-kartenbereiche-abgeschlossenes-projekt">Abgeschlossenes Projekt</h3>
+              <p>Ein Projekt, dessen Anforderungen vollständig erfüllt wurden. Es liegt offen im Punktebereich seiner Person und ist nicht mehr aktiv.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="begriffe-und-kartenbereiche-offene-ablage">Offene Ablage</h3>
+              <p>Ein gemeinsamer, offener Abwurfstapel. Die zuletzt abgeworfene Karte liegt oben. Beim normalen Nachziehen darf ausschließlich diese oberste Karte genommen werden.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="begriffe-und-kartenbereiche-verbrauchsstapel">Verbrauchsstapel</h3>
+              <p>Ein gemeinsamer, verdeckter Stapel für verwendete Projektfaktoren und Ereignisse. Sein Inhalt darf nicht angesehen werden. Er wird zum neuen Aktionsstapel, wenn der Aktionsstapel leer ist.</p>
+            </div>
+          </section>
+          <section class="rule" id="kartenarten">
+            <h2><a class="rule-no" href="#kartenarten">§ 4</a> <span>Kartenarten</span></h2>
+            <div class="rule-sub">
+              <h3 id="kartenarten-projekt">Projekt</h3>
+              <p>Ein Projekt zeigt:</p>
+              <ul>
+                <li>einen überprüfbaren Zielzustand</li>
+                <li>zwei bis vier Anforderungen</li>
+                <li>einen Punktwert in gleicher Höhe</li>
+                <li>optional einen Flavor Text</li>
+              </ul>
+              <p>Ein begonnenes Projekt ist eine Verpflichtung. Sein Punktwert zählt positiv, wenn es abgeschlossen wird. Bleibt es am Spielende aktiv, zählt es unabhängig von seinem Punktwert einen Minuspunkt (<a class="rule-ref" href="#wertung">§ 16</a>). Ein Projekt auf der Hand zählt keine Minuspunkte.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="kartenarten-projektfaktor">Projektfaktor</h3>
+              <p>Es gibt vier Faktortypen. Ein Projektfaktor erfüllt eine offene Anforderung seines Faktortyps:</p>
+              <ul>
+                <li><strong>Team</strong> – Personalzeit, Kooperation, Wissen und Zuständigkeit</li>
+                <li><strong>Daten</strong> – Korpora, Metadaten, Standards und Datenzugang</li>
+                <li><strong>Betrieb</strong> – Systeme, Speicher, Deployment und Wartung</li>
+                <li><strong>Methode</strong> – Verfahren, Auswertung, Automatisierung und Modellierung</li>
+              </ul>
+              <p>Ein Faktor darf nur angelegt werden, wenn er am Zielprojekt eine noch offene Anforderung erfüllen kann.</p>
+              <p><strong>Was ein Faktor bedeutet.</strong> Ein Projektfaktor steht für Aufwand, Ressource oder reale Projektbedingung – nicht automatisch für gute Praxis. Ein nie geprüftes Backup, eine Handarbeit ohne Dokumentation oder eine aufgeschobene Barrierefreiheit erfüllen eine Anforderung mechanisch genauso wie eine solide Lösung. Das Spiel bildet damit ab, womit Projekte tatsächlich laufen, und bewertet nicht deren Qualität. Ein abgeschlossenes Projekt bedeutet: Der Bedarf war gedeckt. Es bedeutet nicht: Es wurde gut gemacht. Wer die Karten in Fortbildung oder Lehre einsetzt, kann genau diesen Unterschied zum Gespräch machen.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="kartenarten-wildcard">Wildcard</h3>
+              <p>Eine Wildcard nennt auf der Karte mehrere erlaubte Faktortypen. Beim Anlegen wird eine davon gewählt und mit der Ausrichtung der Karte oder einem Marker angezeigt. Die Wahl bleibt bestehen, solange die Karte angelegt ist. Kehrt sie auf die Hand zurück, kann beim nächsten Anlegen neu gewählt werden.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="kartenarten-ereignis">Ereignis</h3>
+              <p>Ein Ereignis erzeugt einen einmaligen oder angelegten Effekt. Nach einem einmaligen Effekt kommt es verdeckt auf den Verbrauchsstapel. Ereignisse mit Joker- oder Mehraufwand-Effekt bleiben am Projekt, bis dieses abgeschlossen wird oder ein Karteneffekt sie bewegt.</p>
+              <p>Für Absicherungen gelten Ereignisse mit dem sichtbaren Schlüsselwort <span class="keyword">MEHRAUFWAND</span> oder <span class="keyword">RÜCKSCHLAG</span> als negative Ereignisse. Alle anderen Ereignisse sind nicht negativ. Die Polarität ändert nicht, wer eine Karte als Ziel wählen darf.</p>
+            </div>
+          </section>
+          <section class="rule" id="spielaufbau">
+            <h2><a class="rule-no" href="#spielaufbau">§ 5</a> <span>Spielaufbau</span></h2>
+            <ol>
+              <li>Trennt alle Projekte von Projektfaktoren und Ereignissen.</li>
+              <li>Mischt die 16 Projekte verdeckt zum <strong>Projektstapel</strong>.</li>
+              <li>Mischt die 46 Projektfaktoren und 12 Ereignisse verdeckt zum <strong>Aktionsstapel</strong>.</li>
+              <li>Lasst Platz für offene Ablage und verdeckten Verbrauchsstapel. Beide sind zu Beginn leer.</li>
+              <li>Jede Person nimmt ein Projekt vom Projektstapel und zwei Karten vom Aktionsstapel auf die Hand.</li>
+              <li>Bestimmt zufällig eine Startperson.</li>
+              <li>Stellt die Rundenanzeige auf Runde 1.</li>
+            </ol>
+            <p>Zu Beginn liegt noch kein aktives Projekt aus.</p>
+          </section>
+          <section class="rule" id="runden-und-zuege">
+            <h2><a class="rule-no" href="#runden-und-zuege">§ 6</a> <span>Runden und Züge</span></h2>
+            <p>Eine Runde ist beendet, sobald jede Person genau einen Zug hatte. Gespielt wird von der Startperson aus im Uhrzeigersinn. Nach dem letzten Zug einer Runde wird die Rundenanzeige erhöht; die Startperson beginnt auch die nächste Runde.</p>
+            <p>Jeder Zug hat drei Phasen:</p>
+            <ol>
+              <li>zwei Karten ziehen</li>
+              <li>Aktionen ausführen</li>
+              <li>Hand aufräumen</li>
+            </ol>
+          </section>
+          <section class="rule" id="phase-1-zwei-karten-ziehen">
+            <h2><a class="rule-no" href="#phase-1-zwei-karten-ziehen">§ 7</a> <span>Phase 1: Zwei Karten ziehen</span></h2>
+            <p>Die aktive Person zieht nacheinander zwei Karten. Vor jeder Karte wählt sie eine der verfügbaren Quellen:</p>
+            <ul>
+              <li>oberste Karte des Projektstapels</li>
+              <li>oberste Karte des Aktionsstapels</li>
+              <li>oberste Karte der offenen Ablage</li>
+            </ul>
+            <p>Die beiden Karten dürfen aus derselben oder aus unterschiedlichen Quellen stammen. Wird die oberste Karte der offenen Ablage genommen, ist die darunter liegende Karte anschließend die neue oberste Karte und darf als zweiter Zug genommen werden.</p>
+            <div class="rule-sub">
+              <h3 id="phase-1-zwei-karten-ziehen-leerer-aktionsstapel">Leerer Aktionsstapel</h3>
+              <p>Soll eine Karte vom leeren Aktionsstapel gezogen oder aufgedeckt werden, wird der Verbrauchsstapel gemischt und verdeckt als neuer Aktionsstapel ausgelegt. Ist auch der Verbrauchsstapel leer, muss eine andere Quelle gewählt werden.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="phase-1-zwei-karten-ziehen-leerer-projektstapel">Leerer Projektstapel</h3>
+              <p>Der Projektstapel wird nicht erneuert. Ist er leer, kann nur noch vom Aktionsstapel oder von der offenen Ablage gezogen werden.</p>
+              <p>Sind nicht genug Karten in allen verfügbaren Quellen vorhanden, zieht die aktive Person entsprechend weniger Karten.</p>
+            </div>
+          </section>
+          <section class="rule" id="phase-2-aktionen-ausfuehren">
+            <h2><a class="rule-no" href="#phase-2-aktionen-ausfuehren">§ 8</a> <span>Phase 2: Aktionen ausführen</span></h2>
+            <p>Die aktive Person darf die folgenden Aktionen in beliebiger Reihenfolge ausführen. Sie darf zwischen verschiedenen Aktionen wechseln und jederzeit passen.</p>
+            <div class="rule-sub">
+              <h3 id="phase-2-aktionen-ausfuehren-ein-projekt-beginnen"><span class="rule-no">8.1</span> Ein Projekt beginnen</h3>
+              <p>Lege ein Projekt aus deiner Hand offen vor dir aus. Es ist jetzt aktiv.</p>
+              <p>Pro Zug darf höchstens ein neues Projekt begonnen werden. Die Zahl gleichzeitig aktiver Projekte ist ansonsten nicht begrenzt.</p>
+              <p>Liegt zu Beginn deiner Aktionsphase kein aktives Projekt vor dir und hast du mindestens ein Projekt auf der Hand, musst du eines davon beginnen. Du wählst selbst, welches. Ein Projekt ist eine Verpflichtung, die man nicht aufschieben kann.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="phase-2-aktionen-ausfuehren-projektfaktoren-anlegen"><span class="rule-no">8.2</span> Projektfaktoren anlegen</h3>
+              <p>Du darfst beliebig viele Faktoren aus deiner Hand an deine eigenen aktiven Projekte anlegen, sofern jeder Faktor eine offene Anforderung erfüllt.</p>
+              <p>Auch in einer Kooperation legst du Faktoren grundsätzlich an dein eigenes Projekt. Nur ein ausdrücklicher Karteneffekt darf Faktoren zwischen Projekten verschieben.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="phase-2-aktionen-ausfuehren-ein-ereignis-spielen"><span class="rule-no">8.3</span> Ein Ereignis spielen</h3>
+              <p>Du darfst während deines Zuges höchstens ein Ereignis spielen. Zeige die Karte, nenne alle Ziele und führe ihren Text vollständig aus. Anschließend wird sie verbraucht, sofern sie nicht an ein Projekt angelegt wird.</p>
+              <p>Absicherungen dürfen als Reaktion außerhalb des eigenen Zuges gespielt werden. Sie zählen nicht gegen das Ereignislimit des nächsten eigenen Zuges.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="phase-2-aktionen-ausfuehren-eine-kooperation-beginnen"><span class="rule-no">8.4</span> Eine Kooperation beginnen</h3>
+              <p>Du darfst einer anderen Person eine Kooperation zwischen je einem aktiven Projekt anbieten. Beide Personen müssen zustimmen und alle Regeln aus Abschnitt 11 müssen erfüllt sein.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="phase-2-aktionen-ausfuehren-projekte-abschliessen"><span class="rule-no">8.5</span> Projekte abschließen</h3>
+              <p>Vollständig erfüllte Projekte werden sofort abgeschlossen — auch innerhalb einer Kooperation gilt das für jedes Projekt einzeln, unabhängig vom Partnerprojekt (<a class="rule-ref" href="#kooperation">§ 11</a>).</p>
+            </div>
+          </section>
+          <section class="rule" id="phase-3-hand-aufraeumen">
+            <h2><a class="rule-no" href="#phase-3-hand-aufraeumen">§ 9</a> <span>Phase 3: Hand aufräumen</span></h2>
+            <p>Am Ende des Zuges beträgt das Handlimit fünf Karten. Hat die aktive Person mehr als fünf Karten, legt sie selbst gewählte Karten offen auf die offene Ablage, bis noch fünf Karten auf der Hand sind.</p>
+            <p>Alle Kartenarten zählen zum Limit. Karten werden einzeln abgelegt; die zuletzt abgelegte Karte liegt anschließend oben. Wer höchstens fünf Karten besitzt, wirft in dieser Phase keine weiteren Karten freiwillig ab.</p>
+            <p>Danach endet der Zug.</p>
+          </section>
+          <section class="rule" id="projekte-abschliessen">
+            <h2><a class="rule-no" href="#projekte-abschliessen">§ 10</a> <span>Projekte abschließen</span></h2>
+            <p>Ein Projekt ist erfüllt, sobald für jedes seiner Anforderungssymbole ein passender Faktor angelegt ist. Hinzugefügter Mehraufwand zählt als zusätzliche Anforderung.</p>
+            <p>Beim Abschluss geschieht Folgendes in dieser Reihenfolge:</p>
+            <ol>
+              <li>Lege das Projekt offen in deinen Punktebereich.</li>
+              <li>Prüfe bei jeder angelegten Karte, ob ihr Text den normalen Verbrauch ersetzt, beispielsweise durch eine Rückkehr auf die Hand.</li>
+              <li>Führe diese abweichenden Texte aus.</li>
+              <li>Lege alle übrigen angelegten Projektfaktoren und Ereignisse verdeckt auf den Verbrauchsstapel.</li>
+            </ol>
+            <p>Ein Projekt kann nicht absichtlich unvollendet liegen bleiben, wenn alle Anforderungen erfüllt sind. Punkte werden erst am Spielende zusammengerechnet.</p>
+            <div class="rule-sub rule-example">
+              <h3 id="projekte-abschliessen-beispiel">Beispiel</h3>
+              <p><a class="card-ref" href="karten.html#KAT-R08">Dokumentierter Dissens</a> verlangt zwei Daten-Anforderungen und eine Methoden-Anforderung und ist drei Punkte wert. Für die beiden Daten-Symbole werden zwei verschiedene Datenfaktoren benötigt; ein einzelner Datenfaktor kann nicht beide erfüllen.</p>
+            </div>
+          </section>
+          <section class="rule" id="kooperation">
+            <h2><a class="rule-no" href="#kooperation">§ 11</a> <span>Kooperation</span></h2>
+            <p>Eine Kooperation verbindet ein aktives Projekt von zwei verschiedenen Personen.</p>
+            <div class="rule-sub">
+              <h3 id="kooperation-voraussetzungen">Voraussetzungen</h3>
+              <p>Eine Kooperation darf nur begonnen werden, wenn:</p>
+              <ul>
+                <li>beide Personen zustimmen;</li>
+                <li>an jedem der beiden Projekte höchstens ein Faktor liegt;</li>
+                <li>keines der beiden Projekte bereits Teil einer anderen Kooperation ist;</li>
+                <li>zwischen diesem Personenpaar noch keine andere Kooperation aktiv ist.</li>
+              </ul>
+              <p>Angelegte Mehraufwand-Ereignisse zählen für die Grenze von einem Faktor nicht mit.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="kooperation-darstellung">Darstellung</h3>
+              <p>Schiebt die beiden Projekte sichtbar zusammen oder verbindet sie mit einem Kooperationsmarker. Alle angelegten Karten müssen weiterhin eindeutig einem Projekt oder dem gemeinsamen Platz zugeordnet sein.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="kooperation-gemeinsamer-faktor">Gemeinsamer Faktor</h3>
+              <p>Pro Kooperation darf höchstens ein Faktor gemeinsam genutzt werden.</p>
+              <p>Benötigen beide Projekte denselben Faktortyp, darf ein passender Faktor zwischen die Projekte gelegt werden. Er erfüllt gleichzeitig genau eine Anforderung dieses Faktortyps an jedem Projekt. Beide Personen müssen der gemeinsamen Nutzung zustimmen.</p>
+              <p>Eine Wildcard oder ein als Joker angelegtes Ereignis kann gemeinsam genutzt werden, wenn ihr gewählter Faktortyp zu beiden Projekten passt. Der gemeinsame Faktor zählt niemals zweimal für dasselbe Projekt.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="kooperation-beitraege-und-abschluss">Beiträge und Abschluss</h3>
+              <p>Jede Person legt Karten aus ihrer Hand weiterhin nur an ihr eigenes Projekt oder auf den gemeinsamen Faktorplatz. Sobald die Anforderungen eines Projekts vollständig erfüllt sind, wird es sofort einzeln abgeschlossen — auch wenn das Partnerprojekt noch offen ist:</p>
+              <ol>
+                <li>Die betroffene Person legt ihr Projekt in den eigenen Punktebereich.</li>
+                <li>Alle ausschließlich an diesem Projekt angelegten Faktoren werden einmal verbraucht.</li>
+                <li>Ein gemeinsamer Faktor bleibt liegen, solange ihn das Partnerprojekt noch für eine offene Anforderung braucht. Er wird erst verbraucht, wenn auch das Partnerprojekt abgeschlossen wird oder ihn ein Karteneffekt bewegt.</li>
+                <li>Jede Person erhält am Spielende ausschließlich die Punkte des eigenen Projekts.</li>
+              </ol>
+              <p>Die Kooperation selbst endet, sobald beide Projekte abgeschlossen sind.</p>
+              <p>Eine begonnene Kooperation kann nicht freiwillig beendet werden. Kartentext kann diese Regel ausdrücklich überschreiben. Eine Person darf gleichzeitig mit mehreren anderen Personen kooperieren, aber jedes ihrer Projekte und jedes Personenpaar nur in einer Kooperation.</p>
+            </div>
+          </section>
+          <section class="rule" id="ereignisse-und-timing">
+            <h2><a class="rule-no" href="#ereignisse-und-timing">§ 12</a> <span>Ereignisse und Timing</span></h2>
+            <div class="rule-sub">
+              <h3 id="ereignisse-und-timing-ereignis-ausspielen">Ereignis ausspielen</h3>
+              <ol>
+                <li>Karte offen zeigen.</li>
+                <li>Legale Ziele und notwendige Entscheidungen nennen.</li>
+                <li>Bei einem negativen Ereignis das Reaktionsfenster für Absicherungen öffnen.</li>
+                <li>Den Effekt vollständig ausführen.</li>
+                <li>Die Karte verbrauchen oder gemäß Text anlegen.</li>
+                <li>Prüfen, ob dadurch Projekte abgeschlossen werden.</li>
+              </ol>
+              <p>Ein Ereignis mit einem Ziel darf nur gespielt werden, wenn mindestens ein legales Ziel vorhanden ist. Kann ein Effekt wegen leerer Stapel oder fehlender Karten nicht vollständig ausgeführt werden, wird so viel wie möglich ausgeführt.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="ereignisse-und-timing-reaktionsfenster-und-absicherung">Reaktionsfenster und Absicherung</h3>
+              <p>Nur Ereignisse mit einem Absicherungs-Text dürfen außerhalb des eigenen Zuges gespielt werden.</p>
+              <p>Nach dem Ausspielen eines negativen Ereignisses erhält zuerst die direkt betroffene Person Gelegenheit zur Absicherung. Danach dürfen die übrigen Personen, beginnend links von der aktiven Person, reagieren. Sobald eine Absicherung gespielt wurde, ist das Reaktionsfenster geschlossen.</p>
+              <p>Das negative Ereignis und die Absicherung werden beide verbraucht; der negative Effekt findet nicht statt. Andere Ereignisse können nicht durch eine Absicherung verhindert werden. Auf eine Absicherung wird nicht mit einer weiteren Absicherung reagiert.</p>
+              <p>Bei einem negativen Ereignis ohne einzelnes Ziel – etwa gegen alle Personen – beginnt das Reaktionsrecht links von der aktiven Person.</p>
+            </div>
+          </section>
+          <section class="rule" id="die-acht-ereignis-templates">
+            <h2><a class="rule-no" href="#die-acht-ereignis-templates">§ 13</a> <span>Die acht Ereignis-Templates</span></h2>
+            <p>Der genaue Kartentext bestimmt Reichweite, Faktortyp und Anzahl. Die Templates werden nach den folgenden gemeinsamen Regeln behandelt.</p>
+            <div class="rule-sub">
+              <h3 id="die-acht-ereignis-templates-sichten"><span class="rule-no">E1</span> Sichten</h3>
+              <p>Sieh die angegebene Zahl oberster Karten des genannten Stapels an, nimm die erlaubte Karte auf die Hand und lege die übrigen in der angegebenen oder einer selbst gewählten Reihenfolge unter denselben Stapel. Die Karten gelten nicht als abgeworfen oder verbraucht.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="die-acht-ereignis-templates-nachziehen"><span class="rule-no">E2</span> Nachziehen</h3>
+              <p>Werden Projektfaktoren gesucht, decke nacheinander Karten vom Aktionsstapel auf, bis die angegebene Zahl Faktoren gefunden wurde. Nimm diese Faktoren auf die Hand. Lege dabei aufgedeckte Ereignisse zunächst offen beiseite. Wird der Aktionsstapel leer, darf er nach der normalen Regel aus dem bisherigen Verbrauchsstapel erneuert werden; die beiseitegelegten Karten werden dabei nicht mitgemischt. Ist keine weitere Karte verfügbar, endet die Suche vorzeitig. Lege danach alle beiseitegelegten Ereignisse verdeckt auf den Verbrauchsstapel.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="die-acht-ereignis-templates-rueckholen"><span class="rule-no">E3</span> Rückholen</h3>
+              <p>Anders als beim normalen Nachziehen darf für diesen Effekt die gesamte offene Ablage durchsucht werden. Nimm einen erlaubten Projektfaktor heraus und lasse die Reihenfolge der übrigen Karten unverändert. Wird die oberste Karte entfernt, wird die darunterliegende Karte zur neuen obersten Karte.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="die-acht-ereignis-templates-umverteilen"><span class="rule-no">E4</span> Umverteilen</h3>
+              <p>Verschobene Faktoren müssen an ihrem neuen Projekt jeweils eine offene, passende Anforderung erfüllen. Ihre kontrollierende Person ändert sich nicht. Ein gemeinsamer Faktor darf nur verschoben werden, wenn danach weiterhin alle Kooperationsregeln erfüllt sind.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="die-acht-ereignis-templates-joker"><span class="rule-no">E5</span> Joker</h3>
+              <p>Ein als Joker angelegtes Ereignis gilt solange als Projektfaktor des gewählten Faktortyps. Es kann wie ein angelegter Faktor zurückgegeben oder verschoben werden. Auf der Hand ist es wieder ein Ereignis. Das Ausspielen als Joker verbraucht das Ereignislimit des Zuges.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="die-acht-ereignis-templates-mehraufwand"><span class="rule-no">E6</span> Mehraufwand</h3>
+              <p>Das Ereignis wird an das gewählte fremde Projekt gelegt und fügt die genannte Anforderung hinzu. Es erfüllt selbst keine Anforderung.</p>
+              <p>An jedem Projekt darf höchstens ein Mehraufwand-Ereignis liegen. Beim Abschluss wird es zusammen mit den Faktoren verbraucht.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="die-acht-ereignis-templates-rueckschlag"><span class="rule-no">E7</span> Rückschlag</h3>
+              <p>Der gewählte angelegte Faktor kehrt auf die Hand seiner kontrollierenden Person zurück. War er ein gemeinsamer Faktor, endet seine gemeinsame Nutzung; die Kooperation selbst bleibt bestehen. Ein als Joker angelegtes Ereignis wird auf der Hand wieder als Ereignis behandelt.</p>
+            </div>
+            <div class="rule-sub">
+              <h3 id="die-acht-ereignis-templates-absicherung"><span class="rule-no">E8</span> Absicherung</h3>
+              <p>Eine Absicherung wird im Reaktionsfenster eines negativen Ereignisses gespielt. Passt ihre auf der Karte genannte Reichweite, verhindert sie den vollständigen Effekt. Beide Karten werden verdeckt verbraucht.</p>
+            </div>
+          </section>
+          <section class="rule" id="offene-ablage-und-verbrauchsstapel">
+            <h2><a class="rule-no" href="#offene-ablage-und-verbrauchsstapel">§ 14</a> <span>Offene Ablage und Verbrauchsstapel</span></h2>
+            <p>Die beiden Ablagen haben unterschiedliche Funktionen und werden nicht vermischt:</p>
+            <div class="rule-table">
+            <table>
+            <thead><tr><th scope="col">Vorgang</th><th scope="col">Ziel</th></tr></thead>
+            <tbody>
+            <tr><td>Karte beim Aufräumen abwerfen</td><td>offen auf die offene Ablage</td></tr>
+            <tr><td>Ereignis einmalig ausspielen</td><td>verdeckt auf den Verbrauchsstapel</td></tr>
+            <tr><td>Faktoren eines abgeschlossenen Projekts</td><td>verdeckt auf den Verbrauchsstapel</td></tr>
+            <tr><td>angelegtes Ereignis beim Projektabschluss</td><td>verdeckt auf den Verbrauchsstapel</td></tr>
+            <tr><td>abgeschlossenes Projekt</td><td>offen in den persönlichen Punktebereich</td></tr>
+            </tbody>
+            </table>
+            </div>
+            <p>Die offene Ablage wird nie automatisch neu gemischt. Ihr oberster Eintrag ist eine sichtbare Nachziehoption. Der Verbrauchsstapel ist dagegen ein Recyclingstapel für den Aktionsstapel.</p>
+            <div class="rule-sub rule-example">
+              <h3 id="offene-ablage-und-verbrauchsstapel-beispiel">Beispiel</h3>
+              <p>Oben auf der offenen Ablage liegt <a class="card-ref" href="karten.html#KAT-C16">Regelmäßiges Backup</a>, darunter <a class="card-ref" href="karten.html#KAT-C09">Excel als Datenbank</a>. Beim normalen Nachziehen darf zunächst nur <a class="card-ref" href="karten.html#KAT-C16">Regelmäßiges Backup</a> genommen werden. Danach wird <a class="card-ref" href="karten.html#KAT-C09">Excel als Datenbank</a> zur obersten Karte und kann als zweite Karte desselben Zuges gewählt werden. Ein Rückholen-Effekt darf dagegen einen passenden Faktor auch weiter unten aus der Ablage nehmen.</p>
+            </div>
+          </section>
+          <section class="rule" id="spielende">
+            <h2><a class="rule-no" href="#spielende">§ 15</a> <span>Spielende</span></h2>
+            <p>Die Partie endet nach sechs vollständigen Runden. Jede Person hat damit genau sechs Züge. Nach dem letzten Zug der sechsten Runde werden keine weiteren Karten gezogen oder Aktionen ausgeführt.</p>
+            <p>Der leere Projektstapel beendet die Partie nicht.</p>
+          </section>
+          <section class="rule" id="wertung">
+            <h2><a class="rule-no" href="#wertung">§ 16</a> <span>Wertung</span></h2>
+            <p>Jede Person berechnet:</p>
+            <ol>
+              <li>Pluspunkte in Höhe der Werte aller abgeschlossenen Projekte.</li>
+              <li>Minuspunkte: 1 Punkt für jedes noch aktive, unvollendete Projekt, unabhängig von dessen Punktwert.</li>
+              <li>Projekte auf der Hand, Faktoren, Ereignisse und Kooperationen geben keine weiteren Punkte.</li>
+            </ol>
+            <p>Die höchste Gesamtsumme gewinnt.</p>
+            <div class="rule-sub">
+              <h3 id="wertung-gleichstand">Gleichstand</h3>
+              <p>Bei gleicher Summe entscheidet in dieser Reihenfolge:</p>
+              <ol>
+                <li>mehr abgeschlossene Projekte;</li>
+                <li>weniger aktive, unvollendete Projekte;</li>
+                <li>besteht weiterhin Gleichstand, teilen sich die Personen den Sieg.</li>
+              </ol>
+            </div>
+            <div class="rule-sub rule-example">
+              <h3 id="wertung-wertungsbeispiel">Wertungsbeispiel</h3>
+              <p>Eine Person hat ein Vier-Punkte- und ein Zwei-Punkte-Projekt abgeschlossen. Vor ihr liegt noch ein unvollendetes Drei-Punkte-Projekt. Ihre Endwertung ist:</p>
+              <p><code>4 + 2 − 1 = 5 Punkte</code></p>
+            </div>
+          </section>
+          <section class="rule" id="kartentext-und-sonderfaelle">
+            <h2><a class="rule-no" href="#kartentext-und-sonderfaelle">§ 17</a> <span>Kartentext und Sonderfälle</span></h2>
+            <ul>
+              <li>Kartentext überschreibt eine allgemeine Regel nur dort, wo er ihr ausdrücklich widerspricht.</li>
+              <li>„Bis zu“ erlaubt jede Zahl von null bis zum genannten Maximum. Ein Ereignis mit Ziel benötigt trotzdem mindestens ein legales Ziel.</li>
+              <li>Muss eine Person mehrere eigene Karten gleichzeitig auswählen, bestimmt sie deren Reihenfolge.</li>
+              <li>Treffen mehrere Abschlüsse gleichzeitig ein, schließt die aktive Person zuerst ihre Projekte in selbst gewählter Reihenfolge ab; danach folgen die übrigen Personen im Uhrzeigersinn.</li>
+              <li>Karten im Projekt-, Aktions- und Verbrauchsstapel sind geheim. Offene Projekte, angelegte Karten, Punktebereiche und die offene Ablage sind öffentliche Informationen.</li>
+              <li>Es gibt kein dauerhaftes Eigentum an Karten des gemeinsamen Satzes. Für Rückgabe- und Verschiebeeffekte zählt, wer eine Karte ausgespielt und damit kontrolliert hat.</li>
+            </ul>
+          </section>
+          <section class="rule rule-quickref" id="kurzreferenz">
+            <h2><a class="rule-no" href="#kurzreferenz">§ 18</a> <span>Kurzreferenz</span></h2>
+            <div class="rule-sub">
+              <h3 id="kurzreferenz-aufbau">Aufbau</h3>
+              <ul>
+                <li>16 Projekte als Projektstapel</li>
+                <li>46 Faktoren und 12 Ereignisse als Aktionsstapel</li>
+                <li>Start: ein Projekt und zwei Aktionskarten auf die Hand</li>
+                <li>sechs Runden</li>
+              </ul>
+            </div>
+            <div class="rule-sub">
+              <h3 id="kurzreferenz-zug">Zug</h3>
+              <ol>
+                <li>Zwei Karten aus Projektstapel, Aktionsstapel oder oberster offener Ablage ziehen.</li>
+                <li>Höchstens ein Projekt beginnen — verpflichtend, wenn kein Projekt vor dir liegt.</li>
+                <li>Beliebig viele passende Faktoren anlegen.</li>
+                <li>Höchstens ein Ereignis spielen.</li>
+                <li>Kooperationen anbieten und erfüllte Projekte abschließen.</li>
+                <li>Auf fünf Handkarten abwerfen.</li>
+              </ol>
+            </div>
+            <div class="rule-sub">
+              <h3 id="kurzreferenz-wertung">Wertung</h3>
+              <ul>
+                <li>abgeschlossenes Projekt: Pluspunkte in Höhe seines Punktwerts</li>
+                <li>aktives unvollendetes Projekt: 1 Minuspunkt, unabhängig vom Punktwert</li>
+                <li>höchste Summe gewinnt</li>
+              </ul>
+            </div>
+          </section>
+          <section class="rule" id="herkunft-und-lizenz">
+            <h2><a class="rule-no" href="#herkunft-und-lizenz">§ 19</a> <span>Herkunft und Lizenz</span></h2>
+            <p>Die Grundstruktur aus Projekten, Anforderungen, Ressourcen und Kooperation ist von den Process-of-Science-Varianten des PHYLO-Kartenspiels inspiriert (GSA-Deck, WISE-Deck). Kartentexte, Ikonografie, Rahmen, Rückseite und Illustrationen sind eigenständig entwickelt.</p>
+            <p>Pflicht-Credit gemäß der Mechanik-Lizenz (Creative Commons Attribution-ShareAlike 4.0 International, siehe <a class="link" href="https://phylogame.org/licenses/" target="_blank" rel="noopener">phylogame.org/licenses ↗</a>):</p>
+            <blockquote>
+              <p>Sydney Ang, Genevieve Leduc-Robert, Lu Li, and Sam MacKinnon.</p>
+            </blockquote>
+          </section>
+        </article>
+        <!-- /regeln:inhalt -->
+      </div>
+    </section>
+  </main>
+
+  <!-- site:footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="footer-seal" src="assets/seal-white.svg" alt="" loading="lazy">
+          <a href="index.html#top" class="wordmark" aria-label="Busfaktor: 1, zur Startseite">Busfaktor:<em>1</em></a>
+        </div>
+        <div class="footer-middle">
+          <nav class="footer-links" aria-label="Weitere Links">
+            <a class="link" href="spielprinzip.html">Spielprinzip</a>
+            <a class="link" href="regeln.html" aria-current="page">Regeln</a>
+            <a class="link" href="spielen.html">Spielen</a>
+            <a class="link" href="karten.html">Karten</a>
+            <a class="link" href="generator.html">Kartendesigner</a>
+            <a class="link" href="lizenzen.html">Lizenzen</a>
+            <a class="link" href="https://github.com/twphl/busfaktor_1" target="_blank" rel="noopener">GitHub ↗</a>
+          </nav>
+        </div>
+        <img class="otc-logo" src="assets/otc-logo-full.png" alt="Otters of the Coast" loading="lazy">
+      </div>
+    </div>
+  </footer>
+  <!-- /site:footer -->
+</body>
+</html>

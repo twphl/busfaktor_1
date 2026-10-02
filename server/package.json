@@ -1,0 +1,12 @@
+{
+  "name": "busfaktor-peer-server",
+  "version": "1.0.0",
+  "description": "Signaling-Server für Busfaktor: 1 WebRTC-Multiplayer",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "peer": "^1.0.2"
+  }
+}

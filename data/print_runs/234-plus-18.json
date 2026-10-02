@@ -1,0 +1,16 @@
+{
+  "name": "234-plus-18",
+  "adr": "0019",
+  "description": "Reduzierte Auflage nach dem Preisschock. Ein Bühnensatz, 13 Booster, 12 Blanko-Karten, keine Reserve.",
+  "standard_total": 234,
+  "foil_total": 18,
+  "foil_in_circulation": 8,
+  "stage_sets": 1,
+  "blank_cards": 12,
+  "reserve": 0,
+  "packs": {
+    "normal": 5,
+    "special": 8
+  },
+  "omit_from_boosters": []
+}

@@ -1,0 +1,179 @@
+{
+  "schema": "dhk-render-profile/v1",
+  "version": "1.2.0",
+  "label": "DHK Kartenrendering · Druckvorlage 600 dpi",
+  "source_template": {
+    "path": "data/templates/poker-size.pdf",
+    "sha256": "de693e82bf0c2ab69daa3fb8937dee437523cab44b8ba6fd55ae2ea92b546358",
+    "page_size_points": [
+      197.28,
+      269.279
+    ],
+    "declared_outer_pixels_300_dpi": [
+      822,
+      1122
+    ]
+  },
+  "excluded_nonmatching_templates": [
+    {
+      "path": "data/templates/American-poker-size.ai",
+      "sha256": "d97fcb2b871c0698c52fe4877337efb9fcce1a9ef6c5339e773104af2358379f",
+      "declared_outer_pixels_300_dpi": [
+        816,
+        1110
+      ]
+    },
+    {
+      "path": "data/templates/American-poker-size.psd",
+      "sha256": "3b29d0a016d8f7f05b40bf08f9e05b5905c5fab1272d766144ca892d4b915917",
+      "declared_outer_pixels_300_dpi": [
+        816,
+        1110
+      ]
+    }
+  ],
+  "coordinate_system": {
+    "origin": "top-left",
+    "x_axis": "right",
+    "y_axis": "down",
+    "rectangle_format": [
+      "x",
+      "y",
+      "width",
+      "height"
+    ],
+    "text_safe_rounding": "conservative-inward-on-master-pixels"
+  },
+  "physical_mm": {
+    "outer": {
+      "x": 0,
+      "y": 0,
+      "width": 69.6,
+      "height": 95.0
+    },
+    "trim": {
+      "x": 3.05,
+      "y": 3.05,
+      "width": 63.5,
+      "height": 88.9
+    },
+    "vendor_safe": {
+      "x": 5.6,
+      "y": 5.6,
+      "width": 58.4,
+      "height": 83.8,
+      "inset_from_trim_x": 2.55,
+      "inset_from_trim_y": 2.55
+    },
+    "internal_text_safe": {
+      "x": 6.6,
+      "y": 6.6,
+      "width": 56.4,
+      "height": 81.8,
+      "minimum_inset_from_trim": 3.55,
+      "inset_from_vendor_safe": 1.0
+    }
+  },
+  "master_svg": {
+    "mime_type": "image/svg+xml",
+    "view_box": [
+      0,
+      0,
+      822,
+      1122
+    ],
+    "reference_dpi": 300,
+    "rectangles": {
+      "outer": {
+        "x": 0,
+        "y": 0,
+        "width": 822,
+        "height": 1122
+      },
+      "trim": {
+        "x": 36,
+        "y": 36,
+        "width": 750,
+        "height": 1050
+      },
+      "vendor_safe": {
+        "x": 66,
+        "y": 66,
+        "width": 690,
+        "height": 990
+      },
+      "internal_text_safe": {
+        "x": 78,
+        "y": 78,
+        "width": 666,
+        "height": 966
+      }
+    }
+  },
+  "upload_png": {
+    "mime_type": "image/png",
+    "width": 1644,
+    "height": 2244,
+    "dpi": 600,
+    "scale_from_master": 2,
+    "rectangles": {
+      "outer": {
+        "x": 0,
+        "y": 0,
+        "width": 1644,
+        "height": 2244
+      },
+      "trim": {
+        "x": 72,
+        "y": 72,
+        "width": 1500,
+        "height": 2100
+      },
+      "vendor_safe": {
+        "x": 132,
+        "y": 132,
+        "width": 1380,
+        "height": 1980
+      },
+      "internal_text_safe": {
+        "x": 156,
+        "y": 156,
+        "width": 1332,
+        "height": 1932
+      }
+    },
+    "color": {
+      "pixel_model": "RGB",
+      "color_space": "sRGB",
+      "alpha": false
+    },
+    "max_file_size": {
+      "value": 32,
+      "unit": "MB",
+      "bytes": 32000000
+    }
+  },
+  "golden_card_ids": [
+    "KAT-C12",
+    "KAT-R12",
+    "KAT-U26",
+    "KAT-M07"
+  ],
+  "forbidden_legacy_patterns": {
+    "syntax": "glob",
+    "case_sensitive": false,
+    "font_paths": [
+      "figma/Beleren*.ttf",
+      "figma/JaceBeleren*.ttf",
+      "figma/MPlantin*.ttf"
+    ],
+    "asset_paths": [
+      "figma/dh-katastrophen-figma-plugin-v1.8.4-full/**",
+      "figma/export/**",
+      "figma/cards/**",
+      "data/assets/illustrations/**",
+      "__scrap/**",
+      "data/cards_final.md"
+    ]
+  }
+}

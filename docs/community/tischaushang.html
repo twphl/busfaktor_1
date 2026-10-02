@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>DH-Katastrophen · Community-Karte · Tischaushang</title>
+<style>
+  @page { size: A4 portrait; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #f2f1ee; }
+  body { font-family: "Helvetica Neue", Arial, sans-serif; color: #000; }
+
+  .sheet { width: 210mm; height: 297mm; margin: 0 auto; background: #fff; padding: 12mm 14mm; display: flex; flex-direction: column; }
+
+  h1 { font-size: 21pt; margin: 0; letter-spacing: .01em; text-transform: uppercase; line-height: 1.05; }
+  .lead { font-size: 9.5pt; margin: 2mm 0 4mm; max-width: 150mm; line-height: 1.45; }
+  hr { border: 0; border-top: 0.6mm solid #000; margin: 0 0 4mm; }
+
+  h2 { font-size: 8pt; text-transform: uppercase; letter-spacing: .1em; margin: 0 0 2mm; border-bottom: 0.3mm solid #000; padding-bottom: 1mm; }
+
+  .steps { display: flex; gap: 4mm; margin-bottom: 5mm; }
+  .step { flex: 1; }
+  .step .n { font-size: 15pt; font-weight: bold; line-height: 1; }
+  .step .t { font-size: 8.5pt; line-height: 1.4; margin-top: 1.5mm; }
+
+  .kinds { display: flex; gap: 4mm; margin-bottom: 5mm; }
+  .kind { flex: 1; border: 0.35mm solid #000; padding: 3mm; }
+  .kind h3 { font-size: 10pt; margin: 0 0 1.5mm; }
+  .kind .meta { font-size: 7pt; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 2mm; }
+  .kind p { font-size: 8pt; line-height: 1.4; margin: 0 0 2.5mm; }
+  .ex { font-size: 7.5pt; line-height: 1.4; border-top: 0.3mm dashed #000; padding-top: 2mm; }
+  .ex b { display: block; font-size: 8.5pt; }
+  .ex i { display: block; }
+
+  .tpl { display: flex; flex-wrap: wrap; gap: 1.5mm 4mm; margin-bottom: 5mm; }
+  .tpl div { width: calc(50% - 2mm); font-size: 8pt; line-height: 1.35; }
+  .tpl b { display: inline-block; width: 22mm; }
+
+  .rules { display: flex; gap: 5mm; margin-bottom: 5mm; }
+  .rules ul { margin: 0; padding-left: 4mm; font-size: 8.5pt; line-height: 1.5; flex: 1; }
+
+  .foot { margin-top: auto; border-top: 0.5mm solid #000; padding-top: 2.5mm; font-size: 8pt; line-height: 1.45; }
+
+  @media print { body { background: #fff; } .sheet { margin: 0; box-shadow: none; } }
+  @media screen { .sheet { box-shadow: 0 1mm 4mm rgba(0,0,0,.18); margin: 6mm auto; } }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <h1>Bauen Sie eine Karte</h1>
+  <p class="lead">
+    DH-Katastrophen ist ein Kartenspiel über Digital Humanities, Forschungsdaten, Infrastruktur und
+    institutionelle Katastrophen. Für ein Community-Pack suchen wir Karten von Ihnen: die Sache, die
+    in Ihrem Arbeitsalltag jedes Mal schiefgeht, als spielbare Karte.
+  </p>
+  <hr>
+
+  <h2>In vier Schritten</h2>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><div class="t">Kartenart wählen: Projektfaktor, Ereignis oder Projekt.</div></div>
+    <div class="step"><div class="n">2</div><div class="t">Titel und Flavor Text schreiben. Kurz halten, es ist eine Karte.</div></div>
+    <div class="step"><div class="n">3</div><div class="t">Bildidee notieren: wer tut was, und was ist die sichtbare Folge?</div></div>
+    <div class="step"><div class="n">4</div><div class="t">Unterschreiben, in die Box legen. Fertig.</div></div>
+  </div>
+
+  <h2>Die drei Kartenarten</h2>
+  <div class="kinds">
+    <div class="kind">
+      <h3>Projektfaktor</h3>
+      <div class="meta">am einfachsten · 5 Minuten</div>
+      <p>Eine Ressource, Praxis oder Bedingung, die eine Projektanforderung erfüllt. Wählen Sie einen
+      Faktortyp: Team, Daten, Betrieb oder Methode.</p>
+      <div class="ex"><b>SHK mit Adminrechten</b><i>Acht Stunden pro Woche. Unendliche Verantwortung.</i></div>
+    </div>
+    <div class="kind">
+      <h3>Ereignis</h3>
+      <div class="meta">mit Regelkenntnis</div>
+      <p>Ein einmaliges Ereignis, das hilft oder stört. Der Effekt wird nicht frei geschrieben, sondern
+      aus den acht Bausteinen unten angekreuzt.</p>
+      <div class="ex"><b>47 Mails</b><i>47 Mails, keine Entscheidung.</i><i style="margin-top:1mm">stört · E6 Mehraufwand</i></div>
+    </div>
+    <div class="kind">
+      <h3>Projekt</h3>
+      <div class="meta">bitte mit Betreuung</div>
+      <p>Ein Auftrag mit zwei bis vier Anforderungen. Der Punktwert entspricht genau der Zahl der
+      Anforderungen. Der Titel benennt den erreichten Zustand.</p>
+      <div class="ex"><b>Offene Schnittstelle</b><i>Der Datensatz ist jetzt auch ohne Anfrage erhältlich.</i><i style="margin-top:1mm">Team + Betrieb · 2 Punkte</i></div>
+    </div>
+  </div>
+
+  <h2>Die acht Ereignis-Bausteine</h2>
+  <div class="tpl">
+    <div><b>E1 Sichten</b>oberste Karten ansehen, eine davon nehmen</div>
+    <div><b>E5 Joker</b>das Ereignis selbst als beliebiger Faktor anlegen</div>
+    <div><b>E2 Nachziehen</b>gezielt Projektfaktoren nachziehen</div>
+    <div><b>E6 Mehraufwand</b>fremdes Projekt bekommt eine Anforderung dazu</div>
+    <div><b>E3 Rückholen</b>einen Faktor aus der offenen Ablage holen</div>
+    <div><b>E7 Rückschlag</b>einen angelegten Faktor auf die Hand zurückgeben</div>
+    <div><b>E4 Umverteilen</b>angelegte Faktoren zwischen Projekten verschieben</div>
+    <div><b>E8 Absicherung</b>ein störendes Ereignis verhindern</div>
+  </div>
+
+  <h2>Zwei Leitplanken</h2>
+  <div class="rules">
+    <ul>
+      <li><b>Titel, Drehung, Bild.</b> Der Titel benennt die Sache. Der Flavor Text dreht sie durch
+      Einschränkung, Folge oder Timing — und wiederholt den Titel nicht. Die Bildidee macht diese
+      Beziehung sichtbar.</li>
+      <li>Titel höchstens 24 Zeichen, Flavor Text höchstens 90 Zeichen. Alles andere passt nicht auf
+      die Karte.</li>
+    </ul>
+    <ul>
+      <li><b>Der Witz zielt auf Strukturen.</b> Auf Verfahren, Fristen, Zuständigkeiten und
+      Antragslogik — nie auf Personen.</li>
+      <li>Keine Namen von Personen, Projekten oder Einrichtungen, auch nicht als erkennbare
+      Umschreibung. Kein Spott über Hilfskräfte, Berufsanfänger oder marginalisierte Gruppen.</li>
+    </ul>
+  </div>
+
+  <div class="foot">
+    <b>Wie es weitergeht.</b> Nach der Konferenz sichten wir alle Einreichungen, prüfen sie auf
+    Spielbarkeit und redigieren behutsam. Aufgenommene Karten erscheinen im Community-Pack. Alle
+    Einreichenden, die eine Namensnennung erlaubt haben, stehen in der Credit-Liste — unabhängig
+    davon, welche Karten es ins Pack schaffen. Ohne unterschriebene Einwilligung können wir eine
+    Einreichung leider nicht verwenden.
+  </div>
+
+</div>
+</body>
+</html>

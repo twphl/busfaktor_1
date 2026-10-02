@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111513">
+  <meta name="description" content="Kartendesigner für Busfaktor: 1 — eigene Karten im Layout der gedruckten Karten gestalten und als PNG oder SVG herunterladen.">
+  <title>Kartendesigner · Busfaktor: 1</title>
+  <!-- social:meta -->
+  <link rel="canonical" href="https://busfaktor-eins.de/generator.html">
+  <meta property="og:title" content="Kartendesigner · Busfaktor: 1">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://busfaktor-eins.de/generator.html">
+  <meta property="og:site_name" content="Busfaktor: 1">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:description" content="Kartendesigner für Busfaktor: 1 — eigene Karten im Layout der gedruckten Karten gestalten und als PNG oder SVG herunterladen.">
+  <meta property="og:image" content="https://busfaktor-eins.de/assets/social-preview.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Wortmarke Busfaktor: 1, der Satz Endlich spielend scheitern, Ottersiegel und drei Karten aus dem Set.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kartendesigner · Busfaktor: 1">
+  <meta name="twitter:description" content="Kartendesigner für Busfaktor: 1 — eigene Karten im Layout der gedruckten Karten gestalten und als PNG oder SVG herunterladen.">
+  <meta name="twitter:image" content="https://busfaktor-eins.de/assets/social-preview.png">
+  <meta name="twitter:image:alt" content="Wortmarke Busfaktor: 1, der Satz Endlich spielend scheitern, Ottersiegel und drei Karten aus dem Set.">
+  <!-- /social:meta -->
+  <link rel="icon" href="assets/seal-white.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/NotoSans-Bold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/Bitter-variable.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/NotoSerif-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="cards.js" defer></script>
+  <script src="renderer-data.js" defer></script>
+  <script src="renderer.js" defer></script>
+  <script src="site.js" defer></script>
+  <script src="generator.js" defer></script>
+</head>
+<body class="generator-body">
+
+  <!-- site:nav -->
+  <header class="site-header">
+    <a href="index.html#top" class="wordmark" aria-label="Busfaktor: 1, zur Startseite">Busfaktor:<em>1</em></a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+      <div class="nav-group">
+        <button type="button" class="nav-top" id="das-spiel-button" aria-expanded="false" aria-controls="das-spiel">Das Spiel</button>
+        <div class="nav-menu" id="das-spiel" aria-labelledby="das-spiel-button">
+          <a href="spielprinzip.html">Spielprinzip</a>
+          <a href="regeln.html">Regeln</a>
+          <a href="spielen.html">Im Browser spielen</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <button type="button" class="nav-top active" id="die-karten-button" aria-expanded="false" aria-controls="die-karten">Die Karten</button>
+        <div class="nav-menu" id="die-karten" aria-labelledby="die-karten-button">
+          <a href="karten.html">Alle 82 Motive</a>
+          <a href="generator.html" class="active" aria-current="page">Kartendesigner</a>
+          <a href="index.html#auflage">Anti-Konferenz-Edition</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <button type="button" class="nav-top" id="das-projekt-button" aria-expanded="false" aria-controls="das-projekt">Das Projekt</button>
+        <div class="nav-menu" id="das-projekt" aria-labelledby="das-projekt-button">
+          <a href="index.html#entstehung">Entstehung</a>
+          <a href="index.html#herkunft">Herkunft: PHYLO</a>
+          <a href="index.html#mitmachen">Mitmachen</a>
+          <a href="lizenzen.html">Lizenzen</a>
+          <a href="../keynote-neustart/index.html">Präsentation ↗</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- /site:nav -->
+
+  <main id="top">
+    <section class="page-intro mist">
+      <div class="container">
+        <div class="mast"><span>Kartendesigner</span><span>Im Layout der gedruckten Karten</span></div>
+        <h1 class="page-title">Eure Übergangslösung<br><em>verdient eine eigene Karte.</em></h1>
+        <p class="text">Kartentyp wählen, Titel und Pointe schreiben, Bild hochladen. Die Vorschau entsteht mit einer Portierung des Druckrenderers: dieselbe Typografie, dieselben Zeilenumbrüche, dieselbe Geometrie wie bei den 82 Karten des Sets.</p>
+      </div>
+    </section>
+
+    <section class="generator" aria-labelledby="generator-heading">
+      <h2 class="sr-only" id="generator-heading">Karte gestalten</h2>
+      <div class="container generator-grid">
+        <form class="generator-form" id="card-form" novalidate>
+
+          <fieldset class="field-group">
+            <legend>Ausgangspunkt</legend>
+            <label class="field">
+              <span class="field-label">Beginnen mit</span>
+              <select id="template" name="template">
+                <option value="">Neue Community-Karte</option>
+              </select>
+            </label>
+            <p class="field-hint">Eine Karte aus dem Set lässt sich als Vorlage laden und umbauen.</p>
+          </fieldset>
+
+          <fieldset class="field-group">
+            <legend>Kartentyp</legend>
+            <div class="choice-grid type-choice" role="radiogroup" aria-label="Kartentyp">
+              <label class="choice">
+                <input type="radio" name="card_type" value="Projektfaktor" checked>
+                <span class="choice-body"><b>Projektfaktor</b><small>In fünf Minuten fertig</small></span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="card_type" value="Ereignis">
+                <span class="choice-body"><b>Ereignis</b><small>Für alle mit Regelkenntnis</small></span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="card_type" value="Projekt">
+                <span class="choice-body"><b>Projekt</b><small>Mit etwas mehr Planung</small></span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="field-group">
+            <legend>Titel und Pointe</legend>
+            <label class="field" data-field="name">
+              <span class="field-label">Titel <span class="counter" data-counter="name" data-soft="24"></span></span>
+              <input id="name" name="name" type="text" maxlength="40" autocomplete="off" required>
+              <span class="field-error" id="error-name"></span>
+            </label>
+            <p class="field-hint">Der Titel benennt die Sache: Gegenstand, Zustand oder Vorfall. Höchstens rund 24 Zeichen.</p>
+            <label class="field" data-field="flavor_text">
+              <span class="field-label">Flavor Text <span class="counter" data-counter="flavor_text" data-soft="90"></span></span>
+              <textarea id="flavor_text" name="flavor_text" rows="2" maxlength="160"></textarea>
+              <span class="field-error" id="error-flavor_text"></span>
+            </label>
+            <p class="field-hint">Dreht den Titel durch Einschränkung, Folge oder Timing und wiederholt ihn nicht. Höchstens rund 90 Zeichen.</p>
+          </fieldset>
+
+          <fieldset class="field-group" data-for="Projektfaktor">
+            <legend>Faktortyp</legend>
+            <div class="choice-grid family-choice" role="radiogroup" aria-label="Faktortyp" data-family-radios="factor_family"></div>
+            <p class="field-hint">Ein Projektfaktor erfüllt genau eine passende Anforderung.</p>
+          </fieldset>
+
+          <fieldset class="field-group" data-for="Ereignis">
+            <legend>Ereignis</legend>
+            <label class="field" data-field="effect_template">
+              <span class="field-label">Baustein</span>
+              <select id="effect_template" name="effect_template"></select>
+            </label>
+            <div class="field" data-field="target_family" id="target-field">
+              <span class="field-label" id="target-label">Ziel</span>
+              <div class="chip-row" role="group" aria-labelledby="target-label" id="target-chips"></div>
+              <span class="field-error" id="error-target_family"></span>
+            </div>
+            <p class="field-hint" id="target-hint"></p>
+          </fieldset>
+
+          <fieldset class="field-group" data-for="Projekt">
+            <legend>Projekt</legend>
+            <label class="field">
+              <span class="field-label">Bereich</span>
+              <select id="domain_primary" name="domain_primary"></select>
+            </label>
+            <div class="field" data-field="requirements">
+              <span class="field-label" id="requirements-label">Anforderungen <span class="counter" id="requirements-total"></span></span>
+              <div class="stepper-grid" role="group" aria-labelledby="requirements-label" id="requirement-steppers"></div>
+              <span class="field-error" id="error-requirements"></span>
+            </div>
+            <p class="field-hint">Zwei bis vier Anforderungen. Der Punktwert entspricht genau ihrer Zahl.</p>
+            <label class="field" data-field="project_goal">
+              <span class="field-label">Projektziel</span>
+              <textarea id="project_goal" name="project_goal" rows="3" maxlength="260"></textarea>
+              <span class="field-error" id="error-project_goal"></span>
+            </label>
+            <p class="field-hint">Der erreichte Zustand, an dem man sieht, dass das Projekt fertig ist.</p>
+          </fieldset>
+
+          <fieldset class="field-group">
+            <legend>Regeltext</legend>
+            <label class="field" data-field="rules_text">
+              <span class="field-label">Aus den Bausteinen</span>
+              <textarea id="rules_text" name="rules_text" rows="4" readonly></textarea>
+              <span class="field-error" id="error-rules_text"></span>
+            </label>
+            <label class="toggle"><input type="checkbox" id="free_rules"> Regeltext frei bearbeiten</label>
+            <p class="field-hint">Für Community-Karten entsteht der Regeltext aus den Bausteinen, damit die Karte spielbar bleibt. Frei formulierte Regeln sind für Forks und eigene Varianten gedacht.</p>
+          </fieldset>
+
+          <fieldset class="field-group">
+            <legend>Illustration</legend>
+            <div class="field">
+              <span class="field-label">Bild</span>
+              <div class="upload-row">
+                <label class="btn btn-ghost upload-button"><input type="file" id="artwork" accept="image/png,image/jpeg,image/webp"> Bild wählen</label>
+                <button type="button" class="link-button" id="artwork-clear" hidden>Bild entfernen</button>
+              </div>
+              <span class="field-error" id="error-artwork"></span>
+            </div>
+            <p class="field-hint">Querformat 3:2. Andere Formate werden mittig beschnitten. Das Bild bleibt in eurem Browser.</p>
+            <label class="field">
+              <span class="field-label">Bildidee</span>
+              <textarea id="visual_motif" name="visual_motif" rows="2" maxlength="400"></textarea>
+            </label>
+            <p class="field-hint">Was zeigt das Bild? Die Bildidee macht die Beziehung aus Titel und Flavor Text als Handlung sichtbar.</p>
+          </fieldset>
+
+          <fieldset class="field-group">
+            <legend>Fußzeile</legend>
+            <div class="field-pair">
+              <label class="field" data-field="card_id">
+                <span class="field-label">Kartennummer</span>
+                <input id="card_id" name="card_id" type="text" maxlength="12" autocomplete="off" spellcheck="false">
+                <span class="field-error" id="error-card_id"></span>
+              </label>
+              <label class="field">
+                <span class="field-label">Seltenheit</span>
+                <select id="rarity" name="rarity">
+                  <option value="community">Community (ohne Seltenheit)</option>
+                  <option value="common">Common</option>
+                  <option value="uncommon">Uncommon</option>
+                  <option value="rare">Rare</option>
+                  <option value="mythic">Mythic</option>
+                </select>
+              </label>
+            </div>
+            <p class="field-hint">Community-Karten tragen Nummern von KAT-X01 bis KAT-X99 und keine Seltenheit: Seltenheit ist im Set die gedruckte Menge.</p>
+          </fieldset>
+
+          <aside class="guardrails">
+            <h3>Zwei Leitplanken</h3>
+            <p><b>Titel, Drehung, Bild.</b> Der Titel benennt die Sache. Der Flavor Text dreht sie durch Einschränkung, Folge oder Timing. Die Bildidee macht diese Beziehung sichtbar.</p>
+            <p><b>Der Witz zielt auf Strukturen.</b> Auf Verfahren, Fristen, Zuständigkeiten und Antragslogik, nie auf Personen. Keine Namen von Personen, Projekten oder Einrichtungen, auch nicht als erkennbare Umschreibung.</p>
+          </aside>
+        </form>
+
+        <aside class="generator-preview" aria-label="Vorschau und Download">
+          <div class="preview-frame" id="preview" aria-live="off">
+            <p class="preview-loading">Schriften werden geladen …</p>
+          </div>
+          <p class="render-status" id="render-status" role="status"></p>
+          <div class="export-row">
+            <button type="button" class="btn btn-primary" data-export="png">PNG herunterladen</button>
+            <button type="button" class="btn btn-ghost" data-export="print">Druck-PNG mit Beschnitt</button>
+            <button type="button" class="btn btn-ghost" data-export="svg">SVG</button>
+            <button type="button" class="btn btn-ghost" data-export="csv">Kartendaten kopieren</button>
+          </div>
+          <label class="toggle"><input type="checkbox" id="proof"> Schnitt- und Sicherheitslinien zeigen</label>
+          <p class="preview-note">Nichts wird hochgeladen, die Karte entsteht in eurem Browser. Fürs Community-Pack zählt das Einreichungsformular mit Einwilligung am Stand. Der Generator hilft beim Entwurf. <button type="button" class="link-button" id="reset">Neu beginnen</button></p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- site:footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="footer-seal" src="assets/seal-white.svg" alt="" loading="lazy">
+          <a href="index.html#top" class="wordmark" aria-label="Busfaktor: 1, zur Startseite">Busfaktor:<em>1</em></a>
+        </div>
+        <div class="footer-middle">
+          <nav class="footer-links" aria-label="Weitere Links">
+            <a class="link" href="spielprinzip.html">Spielprinzip</a>
+            <a class="link" href="regeln.html">Regeln</a>
+            <a class="link" href="spielen.html">Spielen</a>
+            <a class="link" href="karten.html">Karten</a>
+            <a class="link" href="generator.html" aria-current="page">Kartendesigner</a>
+            <a class="link" href="lizenzen.html">Lizenzen</a>
+            <a class="link" href="https://github.com/twphl/busfaktor_1" target="_blank" rel="noopener">GitHub ↗</a>
+          </nav>
+          <p class="footer-credits">
+            Der Kartendesigner ist eine JavaScript-Portierung von <code>scripts/render_cards.py</code>. Layout, Farben, Icons und Schriftmetriken kommen unverändert aus dem Python-Renderer.
+          </p>
+        </div>
+        <img class="otc-logo" src="assets/otc-logo-full.png" alt="Otters of the Coast" loading="lazy">
+      </div>
+    </div>
+  </footer>
+  <!-- /site:footer -->
+
+  <noscript><p class="noscript-note">Der Kartendesigner braucht JavaScript.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,8 @@
+services:
+  peer-server:
+    image: peerjs/peerjs-server:latest
+    container_name: busfaktor-peer-server
+    restart: unless-stopped
+    ports:
+      - "9000:9000"
+    command: ["--port", "9000", "--path", "/busfaktor", "--proxied"]

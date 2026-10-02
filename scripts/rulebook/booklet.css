@@ -1,0 +1,165 @@
+/* Regelheft. Seitenformat, Raender und Grundschrift kommen aus
+   render_rulebook.py und werden oben als CSS-Variablen eingesetzt; hier steht
+   nur die Gestaltung.
+
+   Alle festen Masze sind fuer das Kartenformat (62 mm, 7,5 pt Grundschrift)
+   geschrieben und laufen in groesseren Formaten mit:
+     var(--massstab)          = Grundschrift / 7,5 pt -- Textteil, Inhalt,
+                                Ueberschriften; sie folgen der Schrift.
+     var(--massstab-umschlag) = Seitenbreite / 62 mm -- beide Umschlagseiten;
+                                sie sind als ganze Seite gestaltet und folgen
+                                dem Format. */
+
+@page {
+  size: var(--seite-breite) var(--seite-hoehe);
+  margin: var(--rand-oben) var(--rand-aussen) var(--rand-unten) var(--rand-innen);
+  /* Laufender Fuss: ohne Kapitelumbruch ist er der einzige Wegweiser. */
+  @bottom-center {
+    content: string(kapitel) " · " counter(page);
+    font-family: "DHK Sans", sans-serif;
+    font-size: calc(5.5pt * var(--massstab));
+    color: #6F6759;
+    margin-top: calc(1.2mm * var(--massstab));
+  }
+}
+
+@page vorspann {
+  @bottom-center {
+    content: counter(page);
+    font-family: "DHK Sans", sans-serif;
+    font-size: calc(5.5pt * var(--massstab));
+    color: #6F6759;
+    margin-top: calc(1.2mm * var(--massstab));
+  }
+}
+
+/* Bund liegt bei rechten Seiten links, bei linken Seiten rechts. */
+@page :right { margin-left: var(--rand-innen); margin-right: var(--rand-aussen); }
+@page :left  { margin-left: var(--rand-aussen); margin-right: var(--rand-innen); }
+
+@page umschlag { margin: 0; @bottom-center { content: none; } }
+@page leer     { @bottom-center { content: none; } }
+
+html { font-family: "DHK Serif", serif; font-size: var(--grundschrift);
+       line-height: var(--durchschuss); color: #17212B;
+       hyphens: auto; -weasy-hyphens: auto; text-align: justify;
+       hyphenate-limit-chars: 6 3 3; }
+body { margin: 0; }
+
+p { margin: 0 0 calc(1.6pt * var(--massstab)); orphans: 2; widows: 2; }
+p + p { text-indent: 1.1em; }
+
+/* ---------- Umschlag ---------- */
+.umschlag-vorn, .umschlag-hinten { page: umschlag; break-after: page; }
+.umschlag-vorn {
+  width: var(--seite-breite); height: var(--seite-hoehe);
+  background: #090B0D; color: #FFFFFF;
+  display: flex; flex-direction: column; justify-content: space-between;
+  padding: calc(7mm * var(--massstab-umschlag)) var(--rand-aussen) calc(6.5mm * var(--massstab-umschlag)); box-sizing: border-box; text-align: left;
+}
+/* Logo steht unten rechts, Siegel unten links; beide auf gemeinsamer Fusslinie. */
+.umschlag-vorn .logo { width: calc(24mm * var(--massstab-umschlag)); display: block; flex: none; }
+.umschlag-vorn h1 { font-size: calc(19pt * var(--massstab-umschlag)); line-height: 1.04; margin: 0;
+  font-weight: 700; letter-spacing: -0.015em; hyphens: none; }
+.umschlag-vorn .untertitel { font-family: "DHK Sans", sans-serif; font-size: calc(7pt * var(--massstab-umschlag));
+  color: #A3A098; margin-top: calc(2.2mm * var(--massstab-umschlag)); }
+.umschlag-vorn .sockel { display: flex; align-items: flex-end;
+  justify-content: space-between; gap: calc(2.5mm * var(--massstab-umschlag)); margin-bottom: calc(2.6mm * var(--massstab-umschlag)); }
+.umschlag-vorn .siegel { width: calc(18mm * var(--massstab-umschlag)); display: block; flex: none; }
+.umschlag-vorn .stand { font-family: "DHK Sans", sans-serif; font-size: calc(5.5pt * var(--massstab-umschlag));
+  color: #A3A098; letter-spacing: 0.04em; text-align: left; line-height: 1.5; }
+
+/* ---------- Titelei ---------- */
+.titelei { page: vorspann; break-after: page; font-size: calc(6.6pt * var(--massstab)); line-height: 1.38; color: #4B5563;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  height: var(--satz-hoehe); }
+.titelei h2 { font-family: "DHK Sans", sans-serif; font-size: calc(6pt * var(--massstab)); letter-spacing: 0.14em;
+  text-transform: uppercase; color: #17212B; margin: 0 0 calc(1.4mm * var(--massstab)); }
+/* Die Versionszeile sitzt unten auf der Seite, wie ein Impressum; ein Vorspann
+   fuellt den Raum darueber. */
+.titelei .vorspann-text { flex: 1; }
+.titelei .lizenz { margin: 0; }
+
+/* ---------- Inhalt ---------- */
+.inhalt { page: vorspann; break-after: page; }
+.inhalt h2 { font-family: "DHK Sans", sans-serif; font-size: calc(6.5pt * var(--massstab)); letter-spacing: 0.14em;
+  text-transform: uppercase; margin: 0 0 calc(2mm * var(--massstab)); }
+.inhalt ol { list-style: none; margin: 0; padding: 0; font-size: calc(6.3pt * var(--massstab)); line-height: 1.34; }
+.inhalt li { display: flex; gap: calc(1.6mm * var(--massstab)); text-align: left; hyphens: none;
+  margin-bottom: calc(0.45mm * var(--massstab)); }
+/* Feste Breite statt min-width: WeasyPrint verteilt sonst bei einstelligen
+   Nummern die Zeile anders, und die Seitenzahlen springen. Rechtsbuendig,
+   damit Einer unter Einern stehen. */
+.inhalt .nr { font-family: "DHK Sans", sans-serif; font-variant-numeric: tabular-nums;
+  color: #6F6759; flex: none; width: calc(2.4mm * var(--massstab)); text-align: right; }
+.inhalt a { color: inherit; text-decoration: none; }
+.inhalt .titel { flex: 1; }
+.inhalt .seite { flex: none; }
+.inhalt .seite::after { content: target-counter(attr(href), page);
+  font-family: "DHK Sans", sans-serif; font-variant-numeric: tabular-nums;
+  color: #6F6759; }
+
+/* ---------- Kapitel ---------- */
+.regel { break-inside: auto; }
+.regel + .regel { margin-top: calc(4.5mm * var(--massstab)); }
+.kapitelumbruch .regel { break-before: page; }
+.kapitelumbruch .regel + .regel { margin-top: 0; }
+/* Nummer laeuft in der Zeile mit, kein Anreisser ueber der Ueberschrift. */
+.regel h2 { font-family: "DHK Sans", sans-serif; font-size: calc(8.5pt * var(--massstab)); line-height: 1.15;
+  margin: 0 0 calc(2mm * var(--massstab)); font-weight: 700; text-align: left; hyphens: none;
+  break-after: avoid; padding-bottom: calc(1.2mm * var(--massstab)); border-bottom: calc(0.3pt * var(--massstab)) solid #17212B; }
+.regel h2 .nr { color: #6F6759; margin-right: calc(1.1mm * var(--massstab));
+  string-set: kapitel content(); }
+.regel h3 { font-family: "DHK Sans", sans-serif; font-size: calc(6.8pt * var(--massstab)); margin: calc(2.4mm * var(--massstab)) 0 calc(1mm * var(--massstab));
+  font-weight: 700; text-align: left; hyphens: none; break-after: avoid; }
+
+ul, ol { margin: calc(1.2mm * var(--massstab)) 0; padding-left: calc(3.4mm * var(--massstab)); }
+li { margin-bottom: calc(0.5mm * var(--massstab)); orphans: 2; widows: 2; }
+
+blockquote { margin: calc(1.6mm * var(--massstab)) 0; padding-left: calc(2.2mm * var(--massstab)); border-left: calc(0.8pt * var(--massstab)) solid #6F6759;
+  font-style: italic; color: #4B5563; }
+blockquote p { text-indent: 0; }
+
+.regel-tabelle { margin: calc(1.6mm * var(--massstab)) 0; break-inside: avoid; }
+table { border-collapse: collapse; width: 100%; font-size: calc(6pt * var(--massstab)); line-height: 1.3; }
+th, td { text-align: left; vertical-align: top; padding: calc(0.7mm * var(--massstab)) calc(0.9mm * var(--massstab)) calc(0.7mm * var(--massstab)) 0;
+  border-bottom: calc(0.3pt * var(--massstab)) solid #CFC5AD; hyphens: none; }
+th { font-family: "DHK Sans", sans-serif; font-size: calc(5.5pt * var(--massstab)); letter-spacing: 0.06em;
+  text-transform: uppercase; color: #4B5563; }
+
+.beispiel { background: #F4F1E8; padding: calc(1.6mm * var(--massstab)) calc(2mm * var(--massstab)); margin: calc(2mm * var(--massstab)) 0;
+  break-inside: avoid; font-size: calc(6.4pt * var(--massstab)); }
+.beispiel h3 { margin-top: 0; }
+
+code { font-family: "DHK Sans", sans-serif; font-size: 0.92em; }
+.keyword { font-family: "DHK Sans", sans-serif; font-size: 0.86em;
+  letter-spacing: 0.05em; }
+.url { font-family: "DHK Sans", sans-serif; font-size: 0.86em; color: #4B5563; }
+.adr { font-variant-numeric: tabular-nums; }
+
+/* Querverweis bekommt die Seitenzahl aus dem Umbruch. */
+a.regel-ref { color: inherit; text-decoration: none; white-space: nowrap; }
+a.regel-ref::after { content: " (S. " target-counter(attr(href), page) ")";
+  font-family: "DHK Sans", sans-serif; font-size: 0.82em; color: #6F6759; }
+
+.fueller { page: leer; break-after: page; height: 1mm; }
+
+/* ---------- Rueckseite: Kurzreferenz ---------- */
+.umschlag-hinten {
+  width: var(--seite-breite); height: var(--seite-hoehe);
+  background: #F4F1E8; box-sizing: border-box;
+  padding: calc(5mm * var(--massstab-umschlag)) var(--rand-aussen) calc(4.5mm * var(--massstab-umschlag)) var(--rand-aussen);
+  font-size: calc(6.1pt * var(--massstab-umschlag)); line-height: 1.28; text-align: left; break-after: auto;
+}
+.umschlag-hinten h2 { font-family: "DHK Sans", sans-serif; font-size: calc(6.4pt * var(--massstab-umschlag));
+  letter-spacing: 0.1em; text-transform: uppercase; margin: 0 0 calc(1.2mm * var(--massstab-umschlag));
+  padding-bottom: calc(0.8mm * var(--massstab-umschlag)); border-bottom: calc(0.5pt * var(--massstab-umschlag)) solid #17212B; }
+.umschlag-hinten h3 { font-family: "DHK Sans", sans-serif; font-size: calc(5.3pt * var(--massstab-umschlag));
+  letter-spacing: 0.12em; text-transform: uppercase; color: #4B5563;
+  margin: calc(1.5mm * var(--massstab-umschlag)) 0 calc(0.6mm * var(--massstab-umschlag)); }
+.umschlag-hinten ul, .umschlag-hinten ol { margin: 0; padding-left: calc(2.8mm * var(--massstab-umschlag)); }
+.umschlag-hinten li { margin-bottom: calc(0.25mm * var(--massstab-umschlag)); }
+.umschlag-hinten p { margin-bottom: calc(0.8mm * var(--massstab-umschlag)); }
+.umschlag-hinten .fuss { margin-top: calc(1.8mm * var(--massstab-umschlag)); padding-top: calc(1mm * var(--massstab-umschlag));
+  border-top: calc(0.3pt * var(--massstab-umschlag)) solid #CFC5AD; font-family: "DHK Sans", sans-serif;
+  font-size: calc(5pt * var(--massstab-umschlag)); color: #6F6759; }

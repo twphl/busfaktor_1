@@ -1,0 +1,40 @@
+{
+  "print_run": "612-plus-18",
+  "adr": "0002",
+  "seed": 20260804,
+  "packs": 36,
+  "normal_packs": 18,
+  "special_packs": 18,
+  "cards": 432,
+  "rarities": {
+    "common": 252,
+    "mythic": 18,
+    "rare": 54,
+    "uncommon": 108
+  },
+  "card_types": {
+    "Ereignis": 108,
+    "Projekt": 72,
+    "Projektfaktor": 252
+  },
+  "factor_families": {
+    "data": 61,
+    "methods": 61,
+    "operations": 61,
+    "team": 61,
+    "wildcard": 8
+  },
+  "domains": {
+    "data": 106,
+    "methods": 91,
+    "neutral": 10,
+    "operations": 124,
+    "team": 101
+  },
+  "checks": {
+    "functional_profile_per_pack": "2 projects / 7 project factors / 3 events",
+    "all_ground_families_per_pack": true,
+    "duplicate_ids_within_pack": false,
+    "exact_card_copy_counts": true
+  }
+}

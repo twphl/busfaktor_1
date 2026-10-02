@@ -1,0 +1,74 @@
+# Druckpläne
+#
+# Die maschinenlesbaren Auflagenprofile liegen in `data/print_runs/*.json` und
+# sind die Quelle für `scripts/collate_boosters.py`, `scripts/validate_cards.py`
+# und `scripts/export_print_run.py`. Diese Datei fasst sie lesbar zusammen.
+#
+# Seit ADR 0019 gibt es zwei Auflagen. Kopienzahlen je Motiv stehen in keiner
+# der beiden Dateien: sie werden aus der Packstruktur abgeleitet, siehe
+# `scripts/print_run.py`.
+
+active: 234-plus-18
+
+runs:
+  234-plus-18:
+    adr: 0019
+    status: "aktiv"
+    standard_total: 234
+    foil_total: 18
+    foil_in_circulation: 8
+    allocation:
+      stage_set: 74
+      boosters: 148
+      blank_cards: 12
+      reserve: 0
+    boosters:
+      total_packs: 13
+      normal_packs: 5
+      special_packs: 8
+      cards_per_pack: 12
+    copies_per_motif:
+      common: "3–4"
+      uncommon: "1–2"
+      rare: "0–2"
+      mythic: 1
+    notes:
+      - "Ein Bühnensatz statt zwei; der zweite entfiel mit ADR 0019."
+      - "KAT-R16 und KAT-M09 erhalten keine Boosterkarte, sind aber gedruckt."
+      - "10 der 18 Foils sind Belegexemplar und Ersatz, nicht Umlauf."
+      - "12 Blanko-Karten, sechs Motive à zwei (Community-Variante C)."
+
+  612-plus-18:
+    adr: 0002
+    status: "überholt, bleibt ausführbar"
+    standard_total: 612
+    foil_total: 18
+    foil_in_circulation: 18
+    allocation:
+      stage_sets: 148
+      boosters: 414
+      blank_cards: 0
+      reserve: 50
+    boosters:
+      total_packs: 36
+      normal_packs: 18
+      special_packs: 18
+      cards_per_pack: 12
+    copies_per_motif:
+      common: 9
+      uncommon: 4
+      rare: 3
+      mythic: 2
+
+shared:
+  functional_profile_per_pack:
+    projects: 2
+    project_factors: 7
+    events: 3
+  stage_set_size: 74
+  notes:
+    - "Player aids were dropped; the rules sheet carries factor types, turn order and scoring."
+    - "Standard and foil cards should use the same base stock when possible."
+    - "All card backs must be identical."
+    - "Mythics have no non-foil printing in set KAT-01."
+    - "Stage allocation follows ADR 0007 and ADR 0009."

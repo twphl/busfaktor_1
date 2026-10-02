@@ -1,0 +1,42 @@
+BUSFAKTOR: 1 — Originalassets der eigenständigen Keynote
+
+Kanonische Texte: data/cards.csv
+Karten: build/print-run/motifs/cards/*.png, geprüft gegen Daten, Renderer und Illustrationen.
+Illustrationen: data/cards/*.png, alle 82 Motive.
+Blankos: build/print-run/motifs/blank/*.png, sechs Motive.
+Rückseite: frisch mit scripts/render_card_back.py gerendert.
+Siegel: build/seal/siegel.svg, unverändert als assets/seal.svg übernommen.
+Ottermarke: data/assets/otters_of_the_coast_logo_light.png, auf das Sichtbare
+beschnitten als assets/otc-logo-full.png.
+Bildschirmaufbereitung: physischer Endbeschnitt nach data/render_profile.json,
+dann 750 × 1050 Pixel und WebP. Kartentexte und Layout bleiben unverändert.
+
+KI-generierte Illustrationen, erstellt vom Redaktionsteam mit ChatGPT.
+Nutzung im Rahmen der OpenAI-Nutzungsbedingungen. Keine fremden Stilbilder
+oder Franchise-Assets übernommen.
+
+PHYLO-Beispielkarten (Folie 3, inspiration/, fest abgelegt, nicht von
+prepare.py erzeugt): drei unveränderte Karten aus den Originaldecks. Sie
+gehören nicht zu diesem Projekt und stehen nicht unter CC BY-SA, sondern unter
+CC BY-NC-ND 4.0 (https://phylogame.org/licenses/): GSA/PHYLO „Lose Funding!“
+(Art: Maki Naro), WWEST/WISE „Rosalind Franklin“ (Art: Ping Zhu), Ingenium
+„Jocelyn Bell Burnell“ (Grafik: nineSixteen Creative Inc.). Alle Decks:
+https://phylogame.org/decks/
+
+Eigene Regeln, Kartendaten, Illustrationen, Gestaltung, Dokumentation und
+Code: CC BY-SA 4.0.
+Siehe LICENSE.txt und docs/09-licensing-and-attribution.md im Repository.
+Mechanik nach PHYLO Process of Science, CC BY-SA 4.0.
+Pflicht-Credit: Sydney Ang, Genevieve Leduc-Robert, Lu Li, and Sam MacKinnon.
+https://phylogame.org/licenses/
+
+Phosphor Icons 2.1.1 Bold, unveränderte semantische Zuordnung des Repositorys.
+MIT-Lizenz: icons/LICENSE.txt.
+Noto Sans und Noto Serif, unverändert aus data/assets/fonts/; SIL OFL 1.1: fonts/OFL.txt.
+Die gesamte Titelwortmarke einschließlich der goldenen Ziffer 1 verwendet
+die lokal mitgelieferte Noto Sans Bold: fonts/NotoSans-Bold.ttf.
+Bitter von Sol Matas: unveränderte variable Schrift aus dem Google-Fonts-Repository.
+Quelle, Prüfsumme und Lizenz: fonts/Bitter-SOURCE.txt und fonts/Bitter-OFL.txt.
+
+Produktion: geplante Auflage 234-plus-18, ADR 0019.
+Die Investorenrhetorik und der Millionen-Ask gehören zur Vortragssatire.

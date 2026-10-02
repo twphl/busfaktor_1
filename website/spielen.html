@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111513">
+  <meta name="description" content="Busfaktor: 1 im Browser spielen – allein gegen Bots oder zu mehreren an einem Gerät, nach den vollständigen Regeln mit dem Bühnensatz aus 74 Karten.">
+  <title>Spielen · Busfaktor: 1</title>
+  <!-- social:meta -->
+  <link rel="canonical" href="https://busfaktor-eins.de/spielen.html">
+  <meta property="og:title" content="Spielen · Busfaktor: 1">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://busfaktor-eins.de/spielen.html">
+  <meta property="og:site_name" content="Busfaktor: 1">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:description" content="Busfaktor: 1 im Browser spielen – allein gegen Bots oder zu mehreren an einem Gerät, nach den vollständigen Regeln mit dem Bühnensatz aus 74 Karten.">
+  <meta property="og:image" content="https://busfaktor-eins.de/assets/social-preview.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Wortmarke Busfaktor: 1, der Satz Endlich spielend scheitern, Ottersiegel und drei Karten aus dem Set.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Spielen · Busfaktor: 1">
+  <meta name="twitter:description" content="Busfaktor: 1 im Browser spielen – allein gegen Bots oder zu mehreren an einem Gerät, nach den vollständigen Regeln mit dem Bühnensatz aus 74 Karten.">
+  <meta name="twitter:image" content="https://busfaktor-eins.de/assets/social-preview.png">
+  <meta name="twitter:image:alt" content="Wortmarke Busfaktor: 1, der Satz Endlich spielend scheitern, Ottersiegel und drei Karten aus dem Set.">
+  <!-- /social:meta -->
+  <link rel="icon" href="assets/seal-white.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/NotoSans-Bold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/Bitter-variable.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/NotoSans-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="cards.js" defer></script>
+  <script src="renderer-data.js" defer></script>
+  <script src="game-engine.js" defer></script>
+  <script src="game-bots.js" defer></script>
+  <script src="assets/vendor/peerjs.min.js" defer></script>
+  <script src="network.js" defer></script>
+  <script src="site.js" defer></script>
+  <script src="spielen.js" defer></script>
+</head>
+<body class="play-page">
+
+  <!-- site:nav -->
+  <header class="site-header">
+    <a href="index.html#top" class="wordmark" aria-label="Busfaktor: 1, zur Startseite">Busfaktor:<em>1</em></a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+      <div class="nav-group">
+        <button type="button" class="nav-top active" id="das-spiel-button" aria-expanded="false" aria-controls="das-spiel">Das Spiel</button>
+        <div class="nav-menu" id="das-spiel" aria-labelledby="das-spiel-button">
+          <a href="spielprinzip.html">Spielprinzip</a>
+          <a href="regeln.html">Regeln</a>
+          <a href="spielen.html" class="active" aria-current="page">Im Browser spielen</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <button type="button" class="nav-top" id="die-karten-button" aria-expanded="false" aria-controls="die-karten">Die Karten</button>
+        <div class="nav-menu" id="die-karten" aria-labelledby="die-karten-button">
+          <a href="karten.html">Alle 82 Motive</a>
+          <a href="generator.html">Kartendesigner</a>
+          <a href="index.html#auflage">Anti-Konferenz-Edition</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <button type="button" class="nav-top" id="das-projekt-button" aria-expanded="false" aria-controls="das-projekt">Das Projekt</button>
+        <div class="nav-menu" id="das-projekt" aria-labelledby="das-projekt-button">
+          <a href="index.html#entstehung">Entstehung</a>
+          <a href="index.html#herkunft">Herkunft: PHYLO</a>
+          <a href="index.html#mitmachen">Mitmachen</a>
+          <a href="lizenzen.html">Lizenzen</a>
+          <a href="../keynote-neustart/index.html">Präsentation ↗</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- /site:nav -->
+
+  <main id="top">
+    <section class="page-intro play-intro mist" id="play-intro">
+      <div class="container">
+        <div class="mast"><span>Im Browser spielen</span><span>Regeln 1.0 · Bühnensatz mit 74 Karten</span></div>
+        <h1 class="page-title">Scheitern, jetzt auch<br><em>im Browser.</em></h1>
+        <p class="text">Allein gegen Bots, zu mehreren an einem Gerät oder online in einem Raum. Gespielt wird nach den vollständigen Regeln mit dem Bühnensatz; das Programm lässt nur zulässige Züge zu. Solo und am selben Gerät bleibt alles im Browser, eine laufende Partie wird hier gespeichert. Online laufen die Züge direkt zwischen den Browsern; für den Verbindungsaufbau vermitteln ein Signaling- und ein STUN-Server.</p>
+      </div>
+    </section>
+
+    <section class="play-setup" id="setup" aria-labelledby="setup-heading">
+      <div class="container">
+        <div class="resume" id="resume" hidden>
+          <p class="resume-text"><b>Laufende Partie</b> <span id="resume-meta"></span></p>
+          <div class="resume-actions">
+            <button class="btn btn-primary" type="button" id="resume-game">Fortsetzen →</button>
+            <button class="link-button" type="button" id="resume-drop">Verwerfen</button>
+          </div>
+        </div>
+
+        <h2 class="setup-title" id="setup-heading">Neue Partie</h2>
+        <div class="mode-switch" role="radiogroup" aria-label="Spielweise">
+          <button type="button" role="radio" aria-checked="true" data-mode="solo">
+            <strong>Allein gegen Bots</strong>
+            <span>Ein bis drei Bots spielen nach den Strategien der Regelsimulation.</span>
+          </button>
+          <button type="button" role="radio" aria-checked="false" data-mode="table">
+            <strong>Zu mehreren an einem Gerät</strong>
+            <span>Das Gerät wandert weiter. Jede Hand bleibt verdeckt, bis ihre Person übernimmt.</span>
+          </button>
+          <button type="button" role="radio" aria-checked="false" data-mode="online">
+            <strong>Online über WebRTC</strong>
+            <span>Jede Person am eigenen Gerät. Direkt von Browser zu Browser.</span>
+          </button>
+        </div>
+
+        <div id="local-setup">
+          <ol class="seat-list" id="seats" aria-label="Plätze am Tisch"></ol>
+          <div class="seat-tools">
+            <button class="link-button" type="button" id="add-seat">+ Platz hinzufügen</button>
+            <span class="note" id="seat-note">Zwei bis vier Plätze, mindestens einer mit einer Person</span>
+          </div>
+
+          <div class="cta-row">
+            <button class="btn btn-primary" type="button" id="start-game">Partie beginnen →</button>
+            <a class="btn btn-ghost" href="regeln.html" target="_blank" rel="noopener">Regeln lesen ↗</a>
+          </div>
+          <p class="note setup-bots"><b>Umsichtig</b> beginnt ein Projekt nach dem anderen. <b>Abwartend</b> legt ein Projekt erst aus, wenn es im selben Zug fertig wird. <b>Kooperativ</b> führt zwei Projekte zugleich und bietet Kooperationen an.</p>
+        </div>
+
+        <div class="online-setup" id="online-setup" hidden>
+          <div class="online-subtabs" role="tablist" aria-label="Online-Modus">
+            <button type="button" class="tab-btn is-active" id="tab-create-room" role="tab" aria-selected="true" aria-controls="panel-create-room">Raum erstellen</button>
+            <button type="button" class="tab-btn" id="tab-join-room" role="tab" aria-selected="false" aria-controls="panel-join-room">Raum beitreten</button>
+          </div>
+
+          <div class="online-panel" id="panel-create-room" role="tabpanel" aria-labelledby="tab-create-room">
+            <div class="online-form-row">
+              <label for="host-name" class="label">Dein Name</label>
+              <input type="text" id="host-name" class="seat-name" value="Du" maxlength="24" autocomplete="off">
+            </div>
+            <div class="online-room-info">
+              <div class="room-code-box">
+                <span class="room-code-label">Raumcode</span>
+                <strong class="room-code" id="display-room-code">----</strong>
+              </div>
+              <button class="btn btn-ghost btn-sm" type="button" id="copy-room-link">Link kopieren</button>
+            </div>
+
+            <div id="host-status" class="online-status-msg" hidden></div>
+            <h3 class="online-subhead">Mitspielende am Tisch (<span id="online-seat-count">1</span>/4)</h3>
+            <ol class="seat-list online-seat-list" id="online-seats"></ol>
+            <div class="seat-tools">
+              <button class="link-button" type="button" id="online-add-bot">+ Bot hinzufügen</button>
+              <span class="note" id="online-seat-note">Mindestens 2 Personen oder Bots zum Starten</span>
+            </div>
+
+            <div class="cta-row">
+              <button class="btn btn-primary" type="button" id="start-online-game" disabled>Partie beginnen →</button>
+              <a class="btn btn-ghost" href="regeln.html" target="_blank" rel="noopener">Regeln lesen ↗</a>
+            </div>
+          </div>
+
+          <div class="online-panel" id="panel-join-room" role="tabpanel" aria-labelledby="tab-join-room" hidden>
+            <div class="online-form-row">
+              <label for="join-name" class="label">Dein Name</label>
+              <input type="text" id="join-name" class="seat-name" value="Person" maxlength="24" autocomplete="off">
+            </div>
+            <div class="online-form-row">
+              <label for="join-code" class="label">Raumcode</label>
+              <input type="text" id="join-code" class="seat-name" placeholder="z. B. ABCD" maxlength="8" autocomplete="off" style="text-transform:uppercase;font-weight:700;letter-spacing:.1em">
+            </div>
+            <div class="cta-row">
+              <button class="btn btn-primary" type="button" id="btn-join-room">Beitreten →</button>
+              <a class="btn btn-ghost" href="regeln.html" target="_blank" rel="noopener">Regeln lesen ↗</a>
+            </div>
+            <div id="join-status" class="online-status-msg" hidden></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="play mist" id="play" aria-label="Spieltisch" hidden>
+      <div class="play-bar">
+        <p class="play-round"><span>Runde</span> <b id="round">1</b><span>/</span><span id="rounds">6</span></p>
+        <ol class="play-phases" id="phases" aria-label="Phasen des Zuges">
+          <li data-phase="draw">Ziehen</li>
+          <li data-phase="action">Aktionen</li>
+          <li data-phase="cleanup">Aufräumen</li>
+        </ol>
+        <p class="play-turn" id="turn-label" aria-live="polite"></p>
+        <div class="online-bar-info" id="online-bar-info" hidden>
+          <span class="online-dot" aria-hidden="true"></span>
+          <span id="online-bar-text">Online</span>
+        </div>
+        <div class="play-tools">
+          <label class="toggle"><input type="checkbox" id="fast-bots"> Bots schneller</label>
+          <a class="link-button" href="regeln.html" target="_blank" rel="noopener">Regeln ↗</a>
+          <button class="link-button" type="button" id="quit-game">Partie beenden</button>
+        </div>
+      </div>
+
+
+      <div class="play-layout">
+        <div class="play-board">
+          <div class="board-fit" id="board-fit">
+            <div class="opponents" id="opponents"></div>
+            <div class="my-area">
+              <div class="area-head">
+                <h2 class="area-title" id="my-title">Deine Projekte</h2>
+                <p class="area-meta" id="my-meta"></p>
+              </div>
+              <div class="proj-row" id="my-projects"></div>
+              <p class="completed-line" id="my-completed"></p>
+            </div>
+            <div class="hand-area">
+              <div class="area-head">
+                <h2 class="area-title">Deine Hand</h2>
+                <p class="area-meta" id="hand-meta"></p>
+              </div>
+              <div class="hand" id="hand"></div>
+            </div>
+          </div>
+        </div>
+        <aside class="play-side" aria-label="Stapel, Entscheidungen und Protokoll">
+          <div class="piles" id="piles" aria-label="Stapel und Ablagen"></div>
+          <div class="prompt" id="prompt" tabindex="-1"></div>
+          <p class="sr-only" id="announce" aria-live="polite"></p>
+          <details class="play-log" id="log-box" open>
+            <summary>Protokoll</summary>
+            <ol id="log"></ol>
+          </details>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- site:footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img class="footer-seal" src="assets/seal-white.svg" alt="" loading="lazy">
+          <a href="index.html#top" class="wordmark" aria-label="Busfaktor: 1, zur Startseite">Busfaktor:<em>1</em></a>
+        </div>
+        <div class="footer-middle">
+          <nav class="footer-links" aria-label="Weitere Links">
+            <a class="link" href="spielprinzip.html">Spielprinzip</a>
+            <a class="link" href="regeln.html">Regeln</a>
+            <a class="link" href="spielen.html" aria-current="page">Spielen</a>
+            <a class="link" href="karten.html">Karten</a>
+            <a class="link" href="generator.html">Kartendesigner</a>
+            <a class="link" href="lizenzen.html">Lizenzen</a>
+            <a class="link" href="https://github.com/twphl/busfaktor_1" target="_blank" rel="noopener">GitHub ↗</a>
+          </nav>
+          <p class="footer-credits">
+            Regeln aus <code>docs/10-spielregeln.md</code>, Kartentexte aus <code>data/cards.csv</code>, Bots nach der Regelsimulation in <code>scripts/sim/</code>.
+          </p>
+        </div>
+        <img class="otc-logo" src="assets/otc-logo-full.png" alt="Otters of the Coast" loading="lazy">
+      </div>
+    </div>
+  </footer>
+  <!-- /site:footer -->
+
+  <div class="handover" id="handover" hidden>
+    <div class="handover-box" role="dialog" aria-modal="true" aria-labelledby="handover-title" aria-describedby="handover-reason">
+      <h2 class="handover-title" id="handover-title">Weiter mit <em id="handover-name"></em></h2>
+      <p class="text" id="handover-reason"></p>
+      <div class="handover-news" id="handover-news-box">
+        <p class="label">Seitdem am Tisch</p>
+        <ol id="handover-news"></ol>
+      </div>
+      <button class="btn btn-primary" type="button" id="handover-go"></button>
+    </div>
+  </div>
+
+  <dialog id="card-detail" aria-labelledby="detail-title">
+    <button class="detail-close" data-close aria-label="Karte schließen">×</button>
+    <div class="detail-inner">
+      <img id="detail-image" alt="">
+      <div class="detail-copy">
+        <p id="detail-meta" class="detail-meta"></p>
+        <h3 id="detail-title"></h3>
+        <p id="detail-rule"></p>
+        <blockquote id="detail-flavor"></blockquote>
+        <div class="detail-actions">
+          <a class="link" id="detail-collection" href="karten.html" target="_blank" rel="noopener">In der Kartensammlung ansehen ↗</a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="play-dialog" id="discard-view" aria-labelledby="discard-title">
+    <button class="detail-close" data-close aria-label="Ablage schließen">×</button>
+    <h3 class="dialog-title" id="discard-title">Offene Ablage</h3>
+    <p class="note">Oben liegende Karte zuerst. Beim normalen Ziehen darf nur sie genommen werden (§7), Rückholen-Effekte dürfen die ganze Ablage durchsuchen (§13 E3).</p>
+    <div class="discard-grid" id="discard-grid"></div>
+  </dialog>
+
+  <dialog class="play-dialog" id="result" aria-labelledby="result-title">
+    <button class="detail-close" data-close aria-label="Ergebnis schließen">×</button>
+    <h3 class="dialog-title" id="result-title"></h3>
+    <table class="result-table">
+      <thead><tr><th scope="col">Platz</th><th scope="col">Name</th><th scope="col">Abgeschlossen</th><th scope="col">Unvollendet</th><th scope="col">Summe</th></tr></thead>
+      <tbody id="result-rows"></tbody>
+    </table>
+    <p class="note">Bei gleicher Summe entscheiden mehr abgeschlossene, dann weniger unvollendete Projekte (§16).</p>
+    <div class="cta-row">
+      <button class="btn btn-primary" type="button" id="rematch">Revanche →</button>
+      <button class="btn btn-ghost" type="button" id="new-setup">Neue Partie einrichten</button>
+      <button class="link-button" type="button" data-close>Tisch ansehen</button>
+    </div>
+  </dialog>
+</body>
+</html>

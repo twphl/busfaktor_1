@@ -1,0 +1,15 @@
+{
+  "source": "build/card-back/svg/card-back.svg",
+  "source_sha256": "125fc0327549be2779e3c34de0f1648f3e1aa7ee6583f1172ef5b71debe39e7b",
+  "font_source": "/usr/share/fonts/noto/NotoSans-Bold.ttf",
+  "outlined_characters": 46,
+  "png_dimensions": [
+    2048,
+    2048
+  ],
+  "export": "Siegel ohne äußeren Freistellhof; Umschrift als Pfade, eingebettete Ottergrafik unverändert.",
+  "files": {
+    "siegel.svg": "32c34ca0da50078f14ce2af97bad3d1e7274a68fffa622168e6f49465af76f27",
+    "siegel.png": "3b78405af0a60c5a4c4003587ccbd3f781627e14b701bbe4bb48c61860d67047"
+  }
+}

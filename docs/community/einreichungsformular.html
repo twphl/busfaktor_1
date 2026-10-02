@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>DH-Katastrophen · Community-Karte · Einreichungsformular</title>
+<style>
+  @page { size: A4 portrait; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #f2f1ee; }
+  body { font-family: "Helvetica Neue", Arial, sans-serif; color: #000; }
+
+  .sheet {
+    width: 210mm; height: 297mm; margin: 0 auto 6mm; background: #fff;
+    display: flex; flex-direction: column;
+  }
+  .form {
+    height: 148.5mm; padding: 7mm 8mm 6mm; position: relative;
+    display: flex; flex-direction: column;
+  }
+  .form + .form { border-top: 0.4mm dashed #000; }
+
+  .head { display: flex; align-items: baseline; gap: 4mm; border-bottom: 0.5mm solid #000; padding-bottom: 1.4mm; }
+  .head h1 { font-size: 11pt; margin: 0; letter-spacing: .02em; text-transform: uppercase; }
+  .head .sub { font-size: 7.5pt; flex: 1; }
+  .head .nr { font-size: 7pt; white-space: nowrap; }
+  .head .nr .fill { display: inline-block; width: 18mm; border-bottom: 0.3mm solid #000; }
+
+  .hint { font-size: 6.8pt; line-height: 1.35; margin: 1.6mm 0 2mm; }
+  .hint b { text-transform: uppercase; letter-spacing: .04em; }
+
+  .row { display: flex; gap: 3mm; }
+  .box { border: 0.3mm solid #000; padding: 1.6mm 2mm; }
+  .lbl { font-size: 6.5pt; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 1mm; }
+
+  .cb { display: inline-block; width: 3mm; height: 3mm; border: 0.3mm solid #000; margin-right: 1mm; vertical-align: -0.4mm; }
+  .opt { font-size: 8pt; white-space: nowrap; margin-right: 3.5mm; display: inline-block; }
+  .opt.sm { font-size: 7pt; margin-right: 2.2mm; }
+
+  .kind { margin-bottom: 2mm; }
+  .kind .opt { font-size: 9pt; margin-right: 6mm; }
+
+  .cols { display: flex; gap: 2.5mm; margin-bottom: 2mm; }
+  .cols .box { flex: 1; }
+  .cols .box.wide { flex: 1.5; }
+
+  .field { margin-bottom: 1.8mm; }
+  .line { border-bottom: 0.3mm solid #000; height: 5.2mm; }
+  .line.tight { height: 4.6mm; }
+  .cap { font-size: 6.5pt; text-transform: uppercase; letter-spacing: .06em; }
+  .cap span { text-transform: none; letter-spacing: 0; font-size: 6.2pt; }
+
+  .foot { margin-top: auto; border-top: 0.4mm solid #000; padding-top: 1.6mm; font-size: 6.6pt; line-height: 1.4; }
+  .foot .who { display: flex; gap: 3mm; margin-bottom: 1.4mm; }
+  .foot .who > div { flex: 1; }
+  .foot .who .line { height: 4.4mm; }
+  .sig { display: flex; gap: 3mm; align-items: flex-end; margin-top: 1.4mm; }
+  .sig > div:first-child { width: 28mm; }
+  .sig > div:last-child { flex: 1; }
+
+  .req { font-size: 7pt; }
+  .req .fill { display: inline-block; width: 7mm; border-bottom: 0.3mm solid #000; margin: 0 1mm; }
+
+  @media print {
+    body { background: #fff; }
+    .sheet { margin: 0; box-shadow: none; page-break-after: always; }
+  }
+  @media screen {
+    .sheet { box-shadow: 0 1mm 4mm rgba(0,0,0,.18); margin-top: 6mm; }
+  }
+</style>
+</head>
+<body>
+
+<div class="sheet">
+
+  <!-- FORMULAR -->
+  <div class="form">
+    <div class="head">
+      <h1>Community-Karte</h1>
+      <div class="sub">DH-Katastrophen · Kartenentwurf von Teilnehmenden</div>
+      <div class="nr">Redaktion: Nr. <span class="fill"></span></div>
+    </div>
+
+    <div class="hint">
+      <b>So wird eine Karte gut:</b> Der <b>Titel</b> benennt die Sache. Der <b>Flavor Text</b> dreht sie — Einschränkung, Folge oder Timing — und wiederholt den Titel nicht. Die <b>Bildidee</b> zeigt genau diese Beziehung als sichtbare Handlung.
+      <br>Der Witz richtet sich gegen Strukturen und Verfahren, nie gegen Personen. Keine Namen von Personen, Projekten oder Einrichtungen.
+    </div>
+
+    <div class="kind">
+      <span class="lbl" style="display:inline; margin-right:2mm;">Kartenart</span>
+      <span class="opt"><span class="cb"></span>Projektfaktor</span>
+      <span class="opt"><span class="cb"></span>Ereignis</span>
+      <span class="opt"><span class="cb"></span>Projekt</span>
+    </div>
+
+    <div class="cols">
+      <div class="box">
+        <div class="lbl">Nur Projektfaktor · Faktortyp</div>
+        <span class="opt sm"><span class="cb"></span>Team</span>
+        <span class="opt sm"><span class="cb"></span>Daten</span>
+        <span class="opt sm"><span class="cb"></span>Betrieb</span>
+        <span class="opt sm"><span class="cb"></span>Methode</span>
+      </div>
+      <div class="box wide">
+        <div class="lbl">Nur Ereignis · Wirkung und Baustein</div>
+        <div style="margin-bottom:1mm">
+          <span class="opt sm"><span class="cb"></span>hilft</span>
+          <span class="opt sm"><span class="cb"></span>stört</span>
+        </div>
+        <span class="opt sm"><span class="cb"></span>E1 Sichten</span>
+        <span class="opt sm"><span class="cb"></span>E2 Nachziehen</span>
+        <span class="opt sm"><span class="cb"></span>E3 Rückholen</span>
+        <span class="opt sm"><span class="cb"></span>E4 Umverteilen</span>
+        <span class="opt sm"><span class="cb"></span>E5 Joker</span>
+        <span class="opt sm"><span class="cb"></span>E6 Mehraufwand</span>
+        <span class="opt sm"><span class="cb"></span>E7 Rückschlag</span>
+        <span class="opt sm"><span class="cb"></span>E8 Absicherung</span>
+      </div>
+      <div class="box">
+        <div class="lbl">Nur Projekt · Anforderungen</div>
+        <div class="req">
+          Team <span class="fill"></span> Daten <span class="fill"></span><br>
+          Betrieb <span class="fill"></span> Methode <span class="fill"></span><br>
+          <span style="font-size:6.2pt">Summe 2 bis 4 = Punktwert</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="cap">Titel <span>· höchstens 24 Zeichen</span></div>
+      <div class="line"></div>
+    </div>
+
+    <div class="field">
+      <div class="cap">Flavor Text <span>· höchstens 90 Zeichen</span></div>
+      <div class="line tight"></div>
+      <div class="line tight"></div>
+    </div>
+
+    <div class="field">
+      <div class="cap">Bildidee <span>· wer tut was, und was ist die sichtbare Folge?</span></div>
+      <div class="line tight"></div>
+      <div class="line tight"></div>
+    </div>
+
+    <div class="foot">
+      <div class="who">
+        <div><div class="line"></div>Name</div>
+        <div><div class="line"></div>E-Mail, freiwillig, nur für Rückfragen</div>
+      </div>
+      <div>
+        <span class="opt sm"><span class="cb"></span>Bitte mit meinem Namen nennen</span>
+        <span class="opt sm"><span class="cb"></span>Bitte anonym</span>
+      </div>
+      <div style="margin-top:1.2mm">
+        <span class="cb" style="vertical-align:-0.2mm"></span>
+        Ich erlaube dem Projekt DH-Katastrophen, diesen Entwurf unentgeltlich, nicht-exklusiv und ohne zeitliche
+        oder räumliche Begrenzung zu bearbeiten, zu illustrieren, zu drucken und unter einer offenen Lizenz zu
+        veröffentlichen. Ich habe den Entwurf selbst verfasst.
+      </div>
+      <div class="sig">
+        <div><div class="line" style="height:4.4mm"></div>Datum</div>
+        <div><div class="line" style="height:4.4mm"></div>Unterschrift</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FORMULAR (Kopie) -->
+  <div class="form">
+    <div class="head">
+      <h1>Community-Karte</h1>
+      <div class="sub">DH-Katastrophen · Kartenentwurf von Teilnehmenden</div>
+      <div class="nr">Redaktion: Nr. <span class="fill"></span></div>
+    </div>
+
+    <div class="hint">
+      <b>So wird eine Karte gut:</b> Der <b>Titel</b> benennt die Sache. Der <b>Flavor Text</b> dreht sie — Einschränkung, Folge oder Timing — und wiederholt den Titel nicht. Die <b>Bildidee</b> zeigt genau diese Beziehung als sichtbare Handlung.
+      <br>Der Witz richtet sich gegen Strukturen und Verfahren, nie gegen Personen. Keine Namen von Personen, Projekten oder Einrichtungen.
+    </div>
+
+    <div class="kind">
+      <span class="lbl" style="display:inline; margin-right:2mm;">Kartenart</span>
+      <span class="opt"><span class="cb"></span>Projektfaktor</span>
+      <span class="opt"><span class="cb"></span>Ereignis</span>
+      <span class="opt"><span class="cb"></span>Projekt</span>
+    </div>
+
+    <div class="cols">
+      <div class="box">
+        <div class="lbl">Nur Projektfaktor · Faktortyp</div>
+        <span class="opt sm"><span class="cb"></span>Team</span>
+        <span class="opt sm"><span class="cb"></span>Daten</span>
+        <span class="opt sm"><span class="cb"></span>Betrieb</span>
+        <span class="opt sm"><span class="cb"></span>Methode</span>
+      </div>
+      <div class="box wide">
+        <div class="lbl">Nur Ereignis · Wirkung und Baustein</div>
+        <div style="margin-bottom:1mm">
+          <span class="opt sm"><span class="cb"></span>hilft</span>
+          <span class="opt sm"><span class="cb"></span>stört</span>
+        </div>
+        <span class="opt sm"><span class="cb"></span>E1 Sichten</span>
+        <span class="opt sm"><span class="cb"></span>E2 Nachziehen</span>
+        <span class="opt sm"><span class="cb"></span>E3 Rückholen</span>
+        <span class="opt sm"><span class="cb"></span>E4 Umverteilen</span>
+        <span class="opt sm"><span class="cb"></span>E5 Joker</span>
+        <span class="opt sm"><span class="cb"></span>E6 Mehraufwand</span>
+        <span class="opt sm"><span class="cb"></span>E7 Rückschlag</span>
+        <span class="opt sm"><span class="cb"></span>E8 Absicherung</span>
+      </div>
+      <div class="box">
+        <div class="lbl">Nur Projekt · Anforderungen</div>
+        <div class="req">
+          Team <span class="fill"></span> Daten <span class="fill"></span><br>
+          Betrieb <span class="fill"></span> Methode <span class="fill"></span><br>
+          <span style="font-size:6.2pt">Summe 2 bis 4 = Punktwert</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <div class="cap">Titel <span>· höchstens 24 Zeichen</span></div>
+      <div class="line"></div>
+    </div>
+
+    <div class="field">
+      <div class="cap">Flavor Text <span>· höchstens 90 Zeichen</span></div>
+      <div class="line tight"></div>
+      <div class="line tight"></div>
+    </div>
+
+    <div class="field">
+      <div class="cap">Bildidee <span>· wer tut was, und was ist die sichtbare Folge?</span></div>
+      <div class="line tight"></div>
+      <div class="line tight"></div>
+    </div>
+
+    <div class="foot">
+      <div class="who">
+        <div><div class="line"></div>Name</div>
+        <div><div class="line"></div>E-Mail, freiwillig, nur für Rückfragen</div>
+      </div>
+      <div>
+        <span class="opt sm"><span class="cb"></span>Bitte mit meinem Namen nennen</span>
+        <span class="opt sm"><span class="cb"></span>Bitte anonym</span>
+      </div>
+      <div style="margin-top:1.2mm">
+        <span class="cb" style="vertical-align:-0.2mm"></span>
+        Ich erlaube dem Projekt DH-Katastrophen, diesen Entwurf unentgeltlich, nicht-exklusiv und ohne zeitliche
+        oder räumliche Begrenzung zu bearbeiten, zu illustrieren, zu drucken und unter einer offenen Lizenz zu
+        veröffentlichen. Ich habe den Entwurf selbst verfasst.
+      </div>
+      <div class="sig">
+        <div><div class="line" style="height:4.4mm"></div>Datum</div>
+        <div><div class="line" style="height:4.4mm"></div>Unterschrift</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

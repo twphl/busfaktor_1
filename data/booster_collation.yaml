@@ -1,0 +1,68 @@
+set_code: KAT-01
+status: "Implemented by scripts/collate_boosters.py; physical pack check pending"
+
+# Wie viele Packs gedruckt werden, steht im Auflagenprofil
+# (data/print_runs/*.json, ADR 0019) — nicht hier. Der Aufbau eines Packs ist
+# für beide Auflagen identisch; nur ihre Anzahl unterscheidet sie.
+packs_per_run:
+  234-plus-18: { normal: 5, special: 8 }
+  612-plus-18: { normal: 18, special: 18 }
+
+cards_per_pack: 12
+pack_types:
+  normal:
+    slots:
+      common: 7
+      uncommon: 3
+      rare: 2
+      mythic: 0
+  special:
+    slots:
+      common: 7
+      uncommon: 3
+      rare: 1
+      mythic: 1
+functional_slots:
+  normal:
+    common:
+      projects: 1
+      project_factors: 5
+      events: 1
+    uncommon:
+      project_factors: 2
+      events: 1
+    rare:
+      projects: 1
+      events: 1
+  special:
+    common:
+      projects: 1
+      project_factors: 5
+      events: 1
+    uncommon:
+      project_factors: 2
+      events: 1
+    rare:
+      projects: 1
+    mythic:
+      events: 1
+constraints:
+  no_duplicate_card_within_pack: true
+  prefer_domain_variety: true
+  functional_profile_per_pack:
+    projects: 2
+    project_factors: 7
+    events: 3
+  common_factor_families_per_pack:
+    team: 1
+    data: 1
+    operations: 1
+    methods: 1
+    rotating_bonus: 1
+  max_uncommon_wildcards_per_pack: 1
+  mythic_is_always_foil: true
+  pack_exterior_identical: true
+  deterministic_seed_required: true
+  # Ein Motiv darf ohne Boosterkarte bleiben, wenn es im Bühnensatz liegt
+  # oder ein Foil-Mythic ist (ADR 0019); gedruckt wird jedes.
+  every_motif_printed: true
